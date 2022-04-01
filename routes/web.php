@@ -16,3 +16,43 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/DataWisata', function () {
+    return view('Mitra/DataWisata' , [
+        "name" => "Mitra01" ,
+        "image" => "icon.jpg" ,
+        "data_wisata" => "Data Wisata" ,
+        "data_ulasan" => "Data Ulasan" ,
+        "cs" => "Customer Service"
+    ]);
+});
+
+Route::get('/Detail', function () {
+    return view('Mitra/Detail' , [
+        "name" => "Mitra01" ,
+        "image" => "icon.jpg" ,
+        "data_wisata" => "Data Wisata" ,
+        "data_ulasan" => "Data Ulasan" ,
+        "cs" => "Customer Service"
+    ]);
+});
+
+Route::get('/TambahWisata', function () {
+    return view('Mitra/TambahWisata' , [
+        "name" => "Mitra01" ,
+        "image" => "icon.jpg" ,
+        "data_wisata" => "Data Wisata" ,
+        "data_ulasan" => "Data Ulasan" ,
+        "cs" => "Customer Service"
+    ]);
+});
+
+Route::get('/Edit', function () {
+    return view('Mitra/EditWisata' , [
+        "name" => "Mitra01" ,
+        "image" => "icon.jpg" ,
+        "data_wisata" => "Data Wisata" ,
+        "data_ulasan" => "Data Ulasan" ,
+        "cs" => "Customer Service"
+    ]);
+});
