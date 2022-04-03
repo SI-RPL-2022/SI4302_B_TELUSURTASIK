@@ -16,14 +16,20 @@
                 <a class="navbar-brand" href="#">TelusurTasik</a>
                 <a class="navbar-brand" href="#" style="color:#0000ff;" ><img src="img/{{ $image }}" width="30">Logout</a>
                 </div>
+                <a class="navbar-brand" style="background-color:#7AC678; color:white; text-align:center; font-size:14px;" href="/TambahWisata">Tambah Wisata</a>
             </nav>
+            
+        </div>
+        <div class="reg-container mt-4">
+            <h1>Detail Wisata</h1>
+            
         </div>
         
         <ul class="nav flex-column">
             <img src="img/{{ $image }}" alt="{{ $name }}" width="80">
             <h3 style="color: #ffffff;">{{ $name }}</h3> 
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" style="color: #ffffff;">Data Wisata</a>
+                <a class="nav-link active" aria-current="page" href="/DataWisata" style="color: #ffffff;">Data Wisata</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" style="color: #ffffff;">Data Ulasan</a>
@@ -33,6 +39,9 @@
             </li>
 
         </ul>
+        <div class="footer">
+            <p>@all 2020. save rights.</p>
+        </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>

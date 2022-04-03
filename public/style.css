@@ -14,10 +14,15 @@ body {
     width: 265px;
     height: 1080px;
     text-align: left;
-    margin-top: -59px;
+    margin-top: -150px;
     
 
 }
+h1 {
+    text-align: center;
+    color: grey;
+}
+
 .nav h3{
     text-align: center;
     font-size: 2ch;
@@ -31,4 +36,9 @@ body {
 }
 .nav .nav-item{
     margin-top: 10px;
+}
+.footer  {
+    color: white;
+    text-align: center;
+    background-color: #7AC678;
 }
