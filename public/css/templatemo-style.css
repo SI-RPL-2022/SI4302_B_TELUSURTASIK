@@ -162,14 +162,25 @@ https://templatemo.com/tm-516-known
     padding: 100px 0;
   }
 
-  /* #team,
+  #team,
   #about {
-    background: #f9f9f9;
-  } */
+    padding: 15px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  #team,
+  #arrival_section{
+    background: #f7f7f7;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
 
   #team,
   #courses {
-    background: #b6e2b5;
+    background: #def0dd;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 
   #team, 
@@ -269,7 +280,14 @@ https://templatemo.com/tm-516-known
   /*---------------------------------------
       MENU              
   -----------------------------------------*/
-
+  .custom_nav-container .navbar-nav {
+    padding-top: 15px;
+    align-items: center;
+  }
+  .custom_nav-container .navbar-nav .nav-item .nav-link {
+    padding: 5px 25px;
+    margin: 5px 0;
+  }
   .custom-navbar {
     background: #ffffff;
     border-top: 5px solid #7AC678;
@@ -442,11 +460,34 @@ https://templatemo.com/tm-516-known
   /*---------------------------------------
       ABOUT              
   -----------------------------------------*/
+  #about .info{
+    margin-bottom: 15px;
+  }
+  #about .justify-content-center{
+    text-align: center;
+  }
+  #about .media
+    {
+        padding: 15px;
+    }
+  #about .media .fa
+      {
+          color: #7AC678;
+          font-size: 40px;
+          margin-right: 20px;
+      }
+  #about .media .media-heading
+      {
+          border-bottom: 2px solid #feb000;
+          font-weight: 600;
+          font-size: 20px;
+          padding-bottom: 10px;
+      }
 
   #about figure {
     display: inline-block;
     vertical-align: top;
-    margin-left: 15px;
+    margin-left: 5px;
   }
 
   #about figure span {
@@ -469,6 +510,62 @@ https://templatemo.com/tm-516-known
   }
 
 
+  /*---------------------------------------
+      CATEGORIES              
+  -----------------------------------------*/
+
+  /* .rounded-circle {
+      border-radius: 50% !important;
+      text-align: center;
+  }
+  .shadow {
+      box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+  }
+  img, svg {
+      vertical-align: middle;
+  } */
+
+  .arrival_section .heading_container {
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+
+  .arrival_section .box {
+      position: relative;
+  }
+
+  .arrival_section .arrival_bg_box {
+      position: absolute;
+      float: left;
+      width: 60%;
+      height: auto;
+      z-index: 3;
+  }
+
+  .arrival_section .arrival_bg_box img {
+      width: 50%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: top right;
+      object-position: top right;
+  }
+
+  .arrival_section a {
+      display: inline-block;
+      padding: 10px 45px;
+      background-color: #FBB667;
+      border: 1px solid #FBB667;
+      color: #ffffff;
+      border-radius: 0;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+  }
+
+  .arrival_section a:hover {
+      background-color: transparent;
+      color: #FBB667;
+  }
 
   /*---------------------------------------
       TEAM              
@@ -579,7 +676,7 @@ https://templatemo.com/tm-516-known
     display: inline-block;
     vertical-align: middle;
   }
-
+  
   .courses-author img {
     display: inline-block !important;
     border-radius: 50px;
@@ -590,7 +687,7 @@ https://templatemo.com/tm-516-known
 
   .courses-price {
     float: right;
-    margin-top: 10px;
+    /* margin-top: 3px; */
   }
 
   .courses-price span {
@@ -605,7 +702,31 @@ https://templatemo.com/tm-516-known
     background: #3f51b5;
   }
 
+  #courses .btn-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 45px;
+  }
 
+  #courses .btn-box a {
+      display: inline-block;
+      padding: 10px 40px;
+      background-color: #FBB667;
+      border: 1px solid #FBB667;
+      color: #ffffff;
+      border-radius: 0;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+  }
+
+  #courses .btn-box a:hover {
+      background-color: transparent;
+      color: #FBB667;
+  }
 
   /*---------------------------------------
      NEWS              
@@ -752,95 +873,6 @@ https://templatemo.com/tm-516-known
      FOOTER              
   -----------------------------------------*/
 
-  /* footer {
-    background: #ecfdf1;
-    padding: 20px 0;
-  }
-
-  footer .section-title {
-    padding-bottom: 10px;
-  }
-
-  footer h2 {
-    font-size: 20px;
-  }
-
-  footer a,
-  footer p {
-    color: #050505;
-  }
-
-  footer strong {
-    color: #d9d9d9;
-  }
-
-  footer address p {
-    margin-bottom: 0;
-  }
-
-  footer .social-icon {
-    margin-top: 25px;
-  }
-
-  .footer-info {
-    margin-right: 2em;
-  }
-
-  .footer-info h2 {
-    color: #ffffff;
-    padding: 0;
-  }
-
-  .footer_menu h2 {
-    margin-top: 2em;
-  }
-
-  .footer_menu ul {
-    margin: 0;
-    padding: 0;
-  }
-
-  .footer_menu li {
-    display: inline-block;
-    list-style: none;
-    margin: 5px 10px 5px 0;
-  }
-
-  .newsletter-form .form-control {
-    background: transparent;
-    border-radius: 0;
-    box-shadow: none;
-    border: 0;
-    border-bottom: 1px solid #303030;
-    height: 50px;
-    margin: 5px 0;
-  }
-
-  .newsletter-form input[type="submit"] {
-    background: transparent;
-    border: 1px solid #f9f9f9;
-    border-radius: 50px;
-    color: #ffffff;
-    display: block;
-    margin-top: 20px;
-    outline: none;
-    width: 50%;
-  }
-
-  .newsletter-form input[type="submit"]:hover {
-    background: #7AC678;
-    border-color: transparent;
-  }
-
-  .newsletter-form .form-group span {
-    color: #909090;
-    display: block;
-    font-size: 12px;
-    margin-top: 20px;
-  }
-
- */
-
 /* footer */
     body{margin-top:20px;}
     .deneb_footer .widget_wrapper {
@@ -869,7 +901,9 @@ https://templatemo.com/tm-516-known
         margin-top: 5px;
     }
     .deneb_footer .widget_wrapper .widegt_about p {
-        margin-bottom: 20px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        margin-left: 7px;
     }
     .deneb_footer .widget_wrapper .widegt_about .social li {
         display: inline-block;
@@ -1180,3 +1214,4 @@ https://templatemo.com/tm-516-known
     }
   }
   
+

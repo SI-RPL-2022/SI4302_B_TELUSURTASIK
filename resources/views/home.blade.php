@@ -31,6 +31,6 @@ active
 
 </head>
     <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
-    <h1>Halaman Help</h1>
+    <h1>Halaman Home</h1>
 </body>
 </html>
