@@ -20,23 +20,11 @@
                     <li><a href="/wisata" class="smoothScroll">Wisata</a></li>
                     <li><a href="/about" class="smoothScroll">About</a></li>
                     <li><a href="/help" class="smoothScroll">Help</a></li>
-                    {{-- <li><a href="/login" class="navbar-">Login</a></li>
-                    <li><button style="background-color: #7AC678;"><a href="/register" class="navbar-">Register</a></li></button> --}}
                 </ul>
-                @guest
-                    @if (Route::has('login'))
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">Login</a>
-                        </li>
-                    @endif
-
-                    @if (Route::has('register'))
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        </li>
-                    @endif
-                    @else
-                @endguest
-            </div>
+                    <ul class="nav navbar-nav navbar-right"
+                        <li><a href="/login" class="navbar-">Login</a></li>
+                        <button style="background-color: #FBB667; margin-top:22px; border:#FBB667; border-radius: 12px; margin-left:5px; "><a href="/register" class="navbar- my-2 my-md-0">  Register  </a></button>
+                    </ul>
+                
 </div>
 </section>

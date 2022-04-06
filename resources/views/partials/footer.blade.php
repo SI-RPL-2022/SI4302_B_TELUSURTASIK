@@ -1,3 +1,4 @@
+
 <footer class="deneb_footer">
 	<div class="widget_wrapper" style="background-image: url(http://demo.tortoizthemes.com/deneb-html/deneb-ltr/assets/images/footer_bg.png);">
 		<div class="container">
