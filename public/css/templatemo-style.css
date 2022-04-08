@@ -162,6 +162,7 @@ https://templatemo.com/tm-516-known
     padding: 100px 0;
   }
 
+<<<<<<< HEAD
   /* #team,
   #about {
     background: #f9f9f9;
@@ -170,6 +171,27 @@ https://templatemo.com/tm-516-known
   #team,
   #courses {
     background: #b6e2b5;
+=======
+  #team,
+  #about {
+    padding: 15px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  #team,
+  #arrival_section{
+    background: #f7f7f7;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+
+  #team,
+  #courses {
+    background: #def0dd;
+    margin-left: 30px;
+    margin-right: 30px;
+>>>>>>> d6e6acd02eac09a5fb9e3b7a0722dbd3421b1fd6
   }
 
   #team, 
@@ -269,7 +291,18 @@ https://templatemo.com/tm-516-known
   /*---------------------------------------
       MENU              
   -----------------------------------------*/
+<<<<<<< HEAD
 
+=======
+  .custom_nav-container .navbar-nav {
+    padding-top: 15px;
+    align-items: center;
+  }
+  .custom_nav-container .navbar-nav .nav-item .nav-link {
+    padding: 5px 25px;
+    margin: 5px 0;
+  }
+>>>>>>> d6e6acd02eac09a5fb9e3b7a0722dbd3421b1fd6
   .custom-navbar {
     background: #ffffff;
     border-top: 5px solid #7AC678;
@@ -396,16 +429,28 @@ https://templatemo.com/tm-516-known
   .caption h3 a:hover { color: #FF3; }
 
   .home-slider .item-first {
+<<<<<<< HEAD
     background-image: url(../images/slider-image1.jpg);
+=======
+    background-image: url(../images/slider-image8.jpg);
+>>>>>>> d6e6acd02eac09a5fb9e3b7a0722dbd3421b1fd6
 	background-position: center;
   }
 
   .home-slider .item-second {
+<<<<<<< HEAD
     background-image: url(../images/slider-image2.jpg);
   }
 
   .home-slider .item-third {
     background-image: url(../images/slider-image3.jpg);
+=======
+    background-image: url(../images/slider-image6.jpg);
+  }
+
+  .home-slider .item-third {
+    background-image: url(../images/slider-image7.jpg);
+>>>>>>> d6e6acd02eac09a5fb9e3b7a0722dbd3421b1fd6
   }
 
 
@@ -442,11 +487,41 @@ https://templatemo.com/tm-516-known
   /*---------------------------------------
       ABOUT              
   -----------------------------------------*/
+<<<<<<< HEAD
+=======
+  #about .info{
+    margin-bottom: 15px;
+  }
+  #about .justify-content-center{
+    text-align: center;
+  }
+  #about .media
+    {
+        padding: 15px;
+    }
+  #about .media .fa
+      {
+          color: #7AC678;
+          font-size: 40px;
+          margin-right: 20px;
+      }
+  #about .media .media-heading
+      {
+          border-bottom: 2px solid #feb000;
+          font-weight: 600;
+          font-size: 20px;
+          padding-bottom: 10px;
+      }
+>>>>>>> d6e6acd02eac09a5fb9e3b7a0722dbd3421b1fd6
 
   #about figure {
     display: inline-block;
     vertical-align: top;
+<<<<<<< HEAD
     margin-left: 15px;
+=======
+    margin-left: 5px;
+>>>>>>> d6e6acd02eac09a5fb9e3b7a0722dbd3421b1fd6
   }
 
   #about figure span {
@@ -469,6 +544,70 @@ https://templatemo.com/tm-516-known
   }
 
 
+<<<<<<< HEAD
+=======
+  /*---------------------------------------
+      CATEGORIES              
+  -----------------------------------------*/
+
+  /* .rounded-circle {
+      border-radius: 50% !important;
+      text-align: center;
+  }
+  .shadow {
+      box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+  }
+  img, svg {
+      vertical-align: middle;
+  } */
+  /* .arrival_section {
+    background: linear-gradient(to left, #A78758, #C99850);
+    color: white;
+    height: 470px;
+    margin-bottom: 1opx;
+  } */
+  .arrival_section .heading_container {
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+
+  .arrival_section .box {
+      position: relative;
+  }
+
+  .arrival_section .arrival_bg_box {
+      position: absolute;
+      float: right;
+      width: 60%;
+      height: auto;
+      z-index: 3;
+  }
+
+  .arrival_section .arrival_bg_box img {
+      width: 50%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: top right;
+      object-position: top right;
+  }
+
+  .arrival_section a {
+      display: inline-block;
+      padding: 10px 45px;
+      background-color: #FBB667;
+      border: 1px solid #FBB667;
+      color: #ffffff;
+      border-radius: 0;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+  }
+
+  .arrival_section a:hover {
+      background-color: transparent;
+      color: #FBB667;
+  }
+>>>>>>> d6e6acd02eac09a5fb9e3b7a0722dbd3421b1fd6
 
   /*---------------------------------------
       TEAM              
@@ -579,7 +718,11 @@ https://templatemo.com/tm-516-known
     display: inline-block;
     vertical-align: middle;
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> d6e6acd02eac09a5fb9e3b7a0722dbd3421b1fd6
   .courses-author img {
     display: inline-block !important;
     border-radius: 50px;
@@ -590,7 +733,11 @@ https://templatemo.com/tm-516-known
 
   .courses-price {
     float: right;
+<<<<<<< HEAD
     margin-top: 10px;
+=======
+    /* margin-top: 3px; */
+>>>>>>> d6e6acd02eac09a5fb9e3b7a0722dbd3421b1fd6
   }
 
   .courses-price span {
@@ -605,7 +752,35 @@ https://templatemo.com/tm-516-known
     background: #3f51b5;
   }
 
+<<<<<<< HEAD
 
+=======
+  #courses .btn-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 45px;
+  }
+
+  #courses .btn-box a {
+      display: inline-block;
+      padding: 10px 40px;
+      background-color: #FBB667;
+      border: 1px solid #FBB667;
+      color: #ffffff;
+      border-radius: 0;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+  }
+
+  #courses .btn-box a:hover {
+      background-color: transparent;
+      color: #FBB667;
+  }
+>>>>>>> d6e6acd02eac09a5fb9e3b7a0722dbd3421b1fd6
 
   /*---------------------------------------
      NEWS              
@@ -752,6 +927,7 @@ https://templatemo.com/tm-516-known
      FOOTER              
   -----------------------------------------*/
 
+<<<<<<< HEAD
   /* footer {
     background: #ecfdf1;
     padding: 20px 0;
@@ -841,6 +1017,8 @@ https://templatemo.com/tm-516-known
 
  */
 
+=======
+>>>>>>> d6e6acd02eac09a5fb9e3b7a0722dbd3421b1fd6
 /* footer */
     body{margin-top:20px;}
     .deneb_footer .widget_wrapper {
@@ -869,7 +1047,13 @@ https://templatemo.com/tm-516-known
         margin-top: 5px;
     }
     .deneb_footer .widget_wrapper .widegt_about p {
+<<<<<<< HEAD
         margin-bottom: 20px;
+=======
+        margin-top: 10px;
+        margin-bottom: 15px;
+        margin-left: 7px;
+>>>>>>> d6e6acd02eac09a5fb9e3b7a0722dbd3421b1fd6
     }
     .deneb_footer .widget_wrapper .widegt_about .social li {
         display: inline-block;
@@ -1179,4 +1363,9 @@ https://templatemo.com/tm-516-known
       height: inherit;
     }
   }
+<<<<<<< HEAD
   
+=======
+  
+
+>>>>>>> d6e6acd02eac09a5fb9e3b7a0722dbd3421b1fd6

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /********** Template CSS **********/
 :root {
     --primary: #009CFF;
@@ -275,3 +276,76 @@
     background: var(--dark);
     border-color: var(--primary);
 }
+=======
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+
+/* body {
+	background-image: linear-gradient(45deg, #7175da, #9790F2);
+	font-family: 'Muli', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0;
+} */
+
+#team,
+#forum {
+  background: #eeeeee;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 70px;
+}
+
+.courses-container {
+	
+}
+
+.course {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	max-width: 100%;
+	margin: 20px;
+	overflow: hidden;
+	width: 700px;
+}
+
+.course h6 {
+	opacity: 0.6;
+	margin: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.course h2 {
+	letter-spacing: 1px;
+	margin: 10px 0;
+}
+.course-info {
+	padding: 30px;
+	position: relative;
+	width: 100%;
+}
+.btn {
+	background-color: #2A265F;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+	position: absolute;
+	bottom: 10px;
+	right: 30px;
+    top: 20px;
+	letter-spacing: 1px;
+}
+>>>>>>> d6e6acd02eac09a5fb9e3b7a0722dbd3421b1fd6
