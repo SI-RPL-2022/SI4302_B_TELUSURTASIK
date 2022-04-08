@@ -414,16 +414,16 @@ https://templatemo.com/tm-516-known
   .caption h3 a:hover { color: #FF3; }
 
   .home-slider .item-first {
-    background-image: url(../images/slider-image1.jpg);
+    background-image: url(../images/slider-image8.jpg);
 	background-position: center;
   }
 
   .home-slider .item-second {
-    background-image: url(../images/slider-image2.jpg);
+    background-image: url(../images/slider-image6.jpg);
   }
 
   .home-slider .item-third {
-    background-image: url(../images/slider-image3.jpg);
+    background-image: url(../images/slider-image7.jpg);
   }
 
 
@@ -524,7 +524,12 @@ https://templatemo.com/tm-516-known
   img, svg {
       vertical-align: middle;
   } */
-
+  /* .arrival_section {
+    background: linear-gradient(to left, #A78758, #C99850);
+    color: white;
+    height: 470px;
+    margin-bottom: 1opx;
+  } */
   .arrival_section .heading_container {
     color: #ffffff;
     margin-bottom: 10px;
@@ -536,7 +541,7 @@ https://templatemo.com/tm-516-known
 
   .arrival_section .arrival_bg_box {
       position: absolute;
-      float: left;
+      float: right;
       width: 60%;
       height: auto;
       z-index: 3;
