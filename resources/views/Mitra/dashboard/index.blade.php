@@ -64,64 +64,34 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">USER</h1>
+        <h1 class="h2">Data Wisata</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
             <button type="button" class="btn btn-sm btn-outline-secondary">
-                <a class="nav-link active" aria-current="page" href="/TambahWisata" style="color:#7AC678;">Tambah Wisata</a>
+                <a class="nav-link active" aria-current="page" href="{{ route('TambahWisata.create')}}" style="color:#7AC678;">Tambah Wisata</a>
             </button>
             
           </div>
         </div>
       </div>
 
-      <div class="row" style="margin-top:50px; margin-left:50px;">
-        <div class="col-md-10">
-          <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+      <div class="row my-2">
+
+      
+
+          <div class="card" style="width: 18rem;">
+            <img src="https://drive.google.com/uc?export=view&id=1nyvK76AH74m-8sxpyMcH9emjpSEPef0i" class="card-img-top" alt="...">
             <div class="card-body">
-              <h3 class="card-title text-center">Detail Wisata</h3>
-                <div class="text-center mt-4">
-                  <img src="https://drive.google.com/uc?export=view&id=1nyvK76AH74m-8sxpyMcH9emjpSEPef0i" width="50%">
-                </div>
-                  <hr style="position: relative;
-                  top: 20px;
-                  border: none;
-                  height: 3px;
-                  background: #5bc0de;
-                  margin-bottom: 50px;">
-                  <h4 class="text-bold" style="font-size:2ch;">Nama Wisata :</h4>
-                  <h6 style="font-size:2ch;">.....</h6>
-                  <h4 class="text-bold" style="font-size:2ch;">Nama Mitra :</h4>
-                  <h6 style="font-size:2ch;">.........</h6>
-                  <h4 class="text-bold" style="font-size:2ch;">Nomor HP :</h4>
-                  <h6 style="font-size:2ch;">..........</h6>
-                  <h4 class="text-bold" style="font-size:2ch;">Jam Operasional :</h4>
-                  <h6 style="font-size:2ch;">...........</h6>
-                  <h4 class="text-bold" style="font-size:2ch;">Alamat Wisata :</h4>
-                  <h6 style="font-size:2ch;">.........</h6>
-                  <h4 class="text-bold" style="font-size:2ch;">Deskripsi :</h4>
-                  <h6 style="font-size:2ch;">........</h6>
-
-
-                  <div class="row">
-                      <div class="col-md-5">
-                        <a href="/Edit" class="btn btn-primary w-100">Edit</a>
-                        
-                  </div>
-                  <div class="col-md-5" style="margin-left:100px;">
-                    <a href="#" class="btn btn-danger w-100">Delete</a>
-                </div>
-
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="/Detail" class="btn btn-primary">Detail <span data-feather="arrow-right"></span></a>
             </div>
-
           </div>
 
+
+      
+          
         </div>
-
-      </div>
-
-
-
 
     </main>
   </div>

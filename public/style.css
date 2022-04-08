@@ -1,33 +1,14 @@
 body {
     background-color: white;
 }
-.container .navbar {
-    background-color: rgb(238, 238, 238);
-    width: 1000px;
-    margin-left: 190px;
-    margin-right: 0px;
-}
-.flex-column{
-    background-color: #7AC678;
-    color: white;
-    background-position: left;
-    width: 265px;
-    height: 1080px;
-    text-align: left;
-    margin-top: -150px;
-    
 
-}
+
 h1 {
     text-align: center;
     color: grey;
 }
 
-.nav h3{
-    text-align: center;
-    font-size: 2ch;
-    margin-bottom: 40px;
-}
+
 .nav img{
     display: block;
     margin-left: auto;
@@ -41,4 +22,6 @@ h1 {
     color: white;
     text-align: center;
     background-color: #7AC678;
+    margin-top: 100px;
 }
+
