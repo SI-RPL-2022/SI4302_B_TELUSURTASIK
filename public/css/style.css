@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /********** Template CSS **********/
 :root {
     --primary: #009CFF;
@@ -276,7 +275,6 @@
     background: var(--dark);
     border-color: var(--primary);
 }
-=======
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 * {
@@ -348,4 +346,3 @@
     top: 20px;
 	letter-spacing: 1px;
 }
->>>>>>> d6e6acd02eac09a5fb9e3b7a0722dbd3421b1fd6
