@@ -12,14 +12,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 | */
 
-<<<<<<< HEAD
 
 Route::get('/HomeAdmin', function () {
     return view('MainAdmin');
-=======
+
+});    
 Route::get('/', function () {
     return view('Home');
->>>>>>> origin/main
 });
 
 Route::get('/wisata', function () {
