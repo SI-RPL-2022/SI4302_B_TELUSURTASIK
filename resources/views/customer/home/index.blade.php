@@ -194,13 +194,6 @@ active
                                         <h4>{{ $reviews->name }}</h4>
                                    </div>
                                    <p>{{ $reviews->desc }}</p>
-                                   {{-- <div class="tst-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                   </div> --}}
                                    {{ $reviews->title}}
                               </div>
                          </div>
