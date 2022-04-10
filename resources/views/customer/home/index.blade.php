@@ -90,43 +90,18 @@ active
                </div>
           </div>
      </section>
-
-
-     {{-- <!--Categories-->
-     <section id="categories">
-          <div class="container-sm text-center">
-               <h2>Categories</h2>
-               <div class="row mb-7">
-                    <div class="row justify-content-center">
-                         <div class="col-md-4 col-sm-4 text-center">
-                              <img class="rounded-circle" src="images/images.jpg" alt="Generic placeholder image" width="90" height="90">
-                              <h4 style="align-items: center">Pantai</h4>
-                              <a href="/help"><button type="button" class="btn btn-light">Lihat</button></a>
-                         </div>
-                         <div class="col-md-4 col-sm-4 text-center">
-                              <img class="rounded-circle" src="images/image2.jpg" style="align-items: center" alt="Generic placeholder image" width="90" height="90">
-                              <h4 style="align-items: center">Curug</h4>
-                              <a href="/help"><button type="button" class="btn btn-light">Lihat</button></a>
-                         </div>
-                         <div class="col-sm-2 text-center">
-                              <img class="rounded-circle" src="images/wisata2.jpg" alt="Generic placeholder image" width="90" height="90">
-                              <h4 style="align-items: center">Gunung</h4>
-                              <a href="/help"><button type="button" class="btn btn-light">Lihat</button></a>
-                         </div>
-                    </div>
-               </div>
-          </div>
-     </section> --}}
           
      <!-- arrival section -->
      <section class="arrival_section" id="arrival_section">
           <div class="container">
                <div class="box" style="height: fit-content;">
-                    {{-- <div class="arrival_bg_box">
-                         <img src="{{asset('images/wisata3.jpg')}}" alt="">
-                    </div> --}}
                     <div class="row">
-                         <div class="col-md-6 ml-auto">
+                         <div class='col-md-6'>
+                              <div class="arrival_bg_box">
+                                   <img class="img-rounded" src="{{asset('images/kolase.jpg')}}" style="width: 100% ; margin-top:15px" alt="">
+                              </div>
+                         </div>
+                         <div class="col-md-6">
                          <div class="">
                               <div class="heading_container">
                               <h2>
@@ -160,134 +135,35 @@ active
                          <div class="section-title">
                               <h2>Popular Destination <small>Choose place you want to go</small></h2>
                          </div>
-
+                         
                          <div class="owl-carousel owl-theme owl-courses">
+                              @foreach ($wisata as $wisatas)
                               <div class="col-md-4 col-sm-4">
                                    <div class="item">
                                         <div class="courses-thumb">
                                              <div class="courses-top">
                                                        <div class="courses-image">
-                                                            <img src="images/wisata1.jpg" class="img-responsive" style="width:500px;height:250px;" alt="">
+                                                            <img src="{{ asset('images/'.$wisatas->picture) }}" class="img-responsive" style="width:500px;height:250px;" alt="">
                                                        </div>
                                              </div>
 
                                              <div class="courses-detail">
-                                                  <h3><a href="#">Curug Deng-deng</a></h3>
-                                                  <p><i class="fa fa-map-marker" aria-hidden="true"></i>Cipatujah</p>
+                                                  <h3><a href="#">{{ $wisatas->title }}</a></h3>
+                                                  <p><i class="fa fa-map-marker" aria-hidden="true"></i>{{ $wisatas->location }}</p>
                                              </div>
 
                                              <div class="courses-info">
                                                   <div class="courses-author">
-                                                       <span>star</span>
+                                                       <span></span>
                                                   </div>
                                                   <div class="courses-price">
-                                                       <a href="#"><span>Check Details</span></a>
+                                                       <a href="/wisata"><span>Check Details</span></a>
                                                   </div>
                                              </div>
                                         </div>
                                    </div>
                               </div>
-
-                              <div class="col-md-4 col-sm-4">
-                                   <div class="item">
-                                        <div class="courses-thumb">
-                                             <div class="courses-top">
-                                                  <div class="courses-image">
-                                                       <img src="images/wisata2.jpg" class="img-responsive" style="width:500px;height:250px;" alt="">
-                                                  </div>
-                                             </div>
-                                             <div class="courses-detail">
-                                                  <h3><a href="#">Pantai Karang Tawulan</a></h3>
-                                                  <p><i class="fa fa-map-marker" aria-hidden="true"></i>Cimanuk,kec Cikalong</p>
-                                             </div>
-
-                                             <div class="courses-info">
-                                                  <div class="courses-author">
-                                                       <span>star</span>
-                                                  </div>
-                                                  <div class="courses-price">
-                                                       <a href="#"><span>Check Details</span></a>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                   </div>
-                              </div>
-
-                              <div class="col-md-4 col-sm-4">
-                                   <div class="item">
-                                        <div class="courses-thumb">
-                                             <div class="courses-top">
-                                                  <div class="courses-image">
-                                                       <img src="images/wisata3.jpg" class="img-responsive" style="width:500px;height:250px;" alt="">
-                                                  </div>
-                                             </div>
-
-                                             <div class="courses-detail">
-                                                  <h3><a href="#">Curug Panetean </a></h3>
-                                                  <p><i class="fa fa-map-marker" aria-hidden="true">Pangilaran,kec Pancatengah</i></p>
-                                             </div>
-
-                                             <div class="courses-info">
-                                                  <div class="courses-author">
-                                                       <span>star</span>
-                                                  </div>
-                                                  <div class="courses-price">
-                                                       <a href="#"><span>Check Details</span></a>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                   </div>
-                              </div>
-
-                              <div class="col-md-4 col-sm-4">
-                                   <div class="item">
-                                        <div class="courses-thumb">
-                                             <div class="courses-top">
-                                                  <div class="courses-image">
-                                                       <img src="images/wisata4.jpg" class="img-responsive" style="width:500px;height:250px;" alt="">
-                                                  </div>
-                                             </div>
-                                             <div class="courses-detail">
-                                                  <h3><a href="#">Tonjong Canyon</a></h3>
-                                                  <p><i class="fa fa-map-marker" aria-hidden="true"></i>Tanjungsari,Cipatujah</p>
-                                             </div>
-
-                                             <div class="courses-info">
-                                                  <div class="courses-author">
-                                                       <span>star</span>
-                                                  </div>
-                                                  <div class="courses-price">
-                                                       <a href="#"><span>Check Details</span></a>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                   </div>
-                              </div>
-
-                              <div class="col-md-4 col-sm-4">
-                                   <div class="item">
-                                        <div class="courses-thumb">
-                                             <div class="courses-top">
-                                                  <div class="courses-image">
-                                                       <img src="images/wisata5.jpg" class="img-responsive" style="width:500px;height:250px;" alt="">
-                                                  </div>
-                                             </div>
-                                             <div class="courses-detail">
-                                                  <h3><a href="#">Viewdeck Galunggung</a></h3>
-                                                  <p><i class="fa fa-map-marker" aria-hidden="true"></i>Galunggung</p>
-                                             </div>
-
-                                             <div class="courses-info">
-                                                  <div class="courses-author">
-                                                       <span>star</span>
-                                                  </div>
-                                                  <div class="courses-price">
-                                                       <a href="#"><span>Check Details</span></a>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                   </div>
-                              </div>
+                              @endforeach
                          </div>
                          <div class="btn-box">
                               <a href="/wisata">
@@ -308,78 +184,27 @@ active
                          <h2>User Reviews</h2>
                     </div>
                     <div class="owl-carousel owl-theme owl-client">
+                         @foreach ($review as $reviews)
                          <div class="col-md-4 col-sm-4">
                               <div class="item">
                                    <div class="tst-image">
-                                        <img src="images/6.png" class="img-responsive" alt="">
+                                        <img src="{{ asset('images/'.$reviews->photo_user) }}" class="img-responsive" alt="">
                                    </div>
                                    <div class="tst-author">
-                                        <h4>Jackson</h4>
+                                        <h4>{{ $reviews->name }}</h4>
                                    </div>
-                                   <p>Banyak pilihan wisata,menyenangkan</p>
-                                   <div class="tst-rating">
+                                   <p>{{ $reviews->desc }}</p>
+                                   {{-- <div class="tst-rating">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
-                                   </div>
+                                   </div> --}}
+                                   {{ $reviews->title}}
                               </div>
                          </div>
-
-                         <div class="col-md-4 col-sm-4">
-                              <div class="item">
-                                   <div class="tst-image">
-                                        <img src="images/2.png" class="img-responsive" alt="">
-                                   </div>
-                                   <div class="tst-author">
-                                        <h4>Camila</h4>
-                                   </div>
-                                   <p>Mudah dicari dan dimengerti</p>
-                                   <div class="tst-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                   </div>
-                              </div>
-                         </div>
-
-                         <div class="col-md-4 col-sm-4">
-                              <div class="item">
-                                   <div class="tst-image">
-                                        <img src="images/3.png" class="img-responsive" alt="">
-                                   </div>
-                                   <div class="tst-author">
-                                        <h4>Brian</h4>
-                                   </div>
-                                   <p>Amazing!</p>
-                                   <div class="tst-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                   </div>
-                              </div>
-                         </div>
-
-                         <div class="col-md-4 col-sm-4">
-                              <div class="item">
-                                   <div class="tst-image">
-                                        <img src="images/4.png" class="img-responsive" alt="">
-                                   </div>
-                                   <div class="tst-author">
-                                        <h4>Andrio</h4>
-                                   </div>
-                                   <p>Mudah dicari sesuai kategori yang saya inginkan :)</p>
-                                   <div class="tst-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                   </div>
-                              </div>
-                         </div>
-
+                         @endforeach
                </div>
        </div>
    </div>

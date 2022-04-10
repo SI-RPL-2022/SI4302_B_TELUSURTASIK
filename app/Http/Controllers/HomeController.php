@@ -1,38 +1,39 @@
 <?php
-
+   
 namespace App\Http\Controllers;
-
+  
 use Illuminate\Http\Request;
-
+   
 class HomeController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+  
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
     public function index()
     {
         return view('home');
     }
-    public function create()
+  
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function adminHome()
     {
-        // Method untuk menampilkan form create post
+        return view('adminHome');
     }
-    public function store(Request $request)
-    {
-        // Method untuk melakukan insert / input data ke dalam database
-    }
-    public function show($id)
-    {
-        // Method untuk menampilkan single post / detail dari sebuah post
-    }
-    public function edit($id)
-    {
-        // Method untuk menampilkan halaman edit post
-    }
-    public function update(Request $request, $id)
-    {
-        // Method untuk melakukan update data post ke database
-    }
-
-    public function destroy($id)
-    {
-        // Method untuk menghapus data post
-    }
+    
 }

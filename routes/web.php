@@ -20,25 +20,19 @@ use App\Http\Controllers\ReviewController;
 |
 */
 
-Route::get('/', function () {
-    return view('customer.home.index');
-});
 
 Route::get('/wisata', function () {
-    return view('wisata');
+    return view('customer.wisata.index');
 });
 
 Route::get('/about', function () {
-    return view('about');
+    return view('customer.about.index');
 });
 
 Route::get('/help', function () {
-    return view('help');
+    return view('customer.help.index');
 });
 
-// Route::get('/login', function () {
-//     return view('login');
-// });
 Route::get('/register', function () {
     return view('register');
 });
@@ -46,10 +40,17 @@ Route::get('/logout', function () {
     return view('logout');
 });
 
-// Route::get('login', [LoginController::class, 'login'])->name('login');
-// Route::post('actionlogin', [LoginController::class, 'actionlogin'])->name('actionlogin');
-// Route::get('/', [HomeController::class, 'index'])->name('home')->middleware('auth');
-// Route::get('actionlogout', [LoginController::class, 'actionlogout'])->name('actionlogout')->middleware('auth');
+
+Auth::routes();
+
+Route::get('/', function () {
+    return view('customer.home.index');
+});
+Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('landing.page');
+
+Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::get('/review', [ReviewController::class, 'index']);
 Route::get('/admin/wisata', [WisataController::class, 'wisataAdmin']);
 Route::get('/admin/wisata/create', [WisataController::class, 'create']);

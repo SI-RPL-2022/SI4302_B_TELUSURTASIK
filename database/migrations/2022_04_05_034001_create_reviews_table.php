@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->string('id_user');
-            $table->string('id_wisata');
-            $table->string('picture');
-            $table->string('name');
+            $table->bigInteger('id_user')->unsigned();
+            $table->foreign('id_user')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->bigInteger('id_wisata')->unsigned();
+            $table->foreign('id_wisata')->references('id_wisata')->on('wisatas')->onUpdate('cascade')->onDelete('cascade');
             $table->string('desc');
             $table->string('show');
+            $table->timestamps();
         });
     }
 

@@ -10,7 +10,7 @@
                     </button>
 
                   <!-- lOGO TEXT HERE -->
-                  <a href="/" class="navbar-brand"><img src="images/logo.png" alt=""></a>
+                  <a href="/" class="navbar-brand"><img src="{{ asset('images/logo.png') }}" alt=""></a>
              </div>
 
             <!-- MENU LINKS -->
@@ -21,9 +21,39 @@
                     <li><a href="/about" class="smoothScroll">About</a></li>
                     <li><a href="/help" class="smoothScroll">Help</a></li>
                 </ul>
-                    <ul class="nav navbar-nav navbar-right"
-                        <li><a href="/login" class="navbar-">Login</a></li>
-                        <button style="background-color: #FBB667; margin-top:22px; border:#FBB667; border-radius: 12px; margin-left:5px; "><a href="/register" class="navbar- my-2 my-md-0">  Register  </a></button>
+                    <ul class="nav navbar-nav navbar-right">
+                        @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                            @endif
+
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+                            </li>
+                            <li>
+                                
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                
+                            </li>
+                        @endguest
                     </ul>
                 
 </div>
