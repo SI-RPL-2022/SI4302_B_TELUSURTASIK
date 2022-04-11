@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class BikinTableWisata extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -15,14 +15,13 @@ class BikinTableWisata extends Migration
     {
         Schema::create('wisatas', function (Blueprint $table) {
             $table->id('id_wisata');
-            $table->string('nama_wisata');
-            $table->string('slug');
-            $table->string('alamat');
-            $table->string('nama_mitra');
+            $table->string('title');
+            $table->string('categorie');
+            $table->text('location');
             $table->text('desc');
-            $table->string('url_loc');
+            $table->string('status');
             $table->string('picture');
-            ;
+            $table->timestamps();
         });
     }
 
@@ -35,4 +34,4 @@ class BikinTableWisata extends Migration
     {
         Schema::dropIfExists('wisatas');
     }
-}
+};

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class BikinTableUser extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,16 @@ class BikinTableUser extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id('id_user');
+        Schema::create('mitras', function (Blueprint $table) {
+            $table->id('id_mitra');
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('email');
+            $table->timestamp('email_verified_at')->nullable();
+            $table->boolean('is_mitra')->nullable();
             $table->string('password');
-            $table->string('no_hp');
-            $table->string('foto_user');
+            $table->string('photo_mitra');
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 
@@ -30,6 +33,6 @@ class BikinTableUser extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('mitras');
     }
-}
+};

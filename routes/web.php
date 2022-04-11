@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\WisataController;
+
+
+
 
 /* 
 |--------------------------------------------------------------------------
@@ -13,6 +18,12 @@ use Illuminate\Support\Facades\Route;
 | */
 
 
-Route::get('/HomeAdmin', function () {
-    return view('MainAdmin');
-});
+
+
+
+
+Route::get('/DataUser', [UserController::class, 'showUserData']);
+Route::get('/DataMitra', [UserController::class, 'showMitraData']);
+Route::get('/DataWisata', [WisataController::class, 'showWisataData']);
+Route::get('/EditDataMitraUser/{id}', [UserController::class, 'UpdateUserData']);
+Route::get('/EditDataWisata/{id}', [WisataController::class, 'UpdateWisataData']);
