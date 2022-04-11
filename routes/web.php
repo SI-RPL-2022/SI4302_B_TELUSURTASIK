@@ -5,7 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\WisataController;
 use App\Http\Controllers\ReviewController;
-
+use App\Http\Controllers\UserController;
 
 
 
@@ -50,6 +50,7 @@ Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('la
 
 Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('admin/datauser', [UserController::class, 'showUserData'])->name('admin.datauser')->middleware('is_admin');
 
 Route::get('/review', [ReviewController::class, 'index']);
 Route::get('/admin/wisata', [WisataController::class, 'wisataAdmin']);

@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
   
 use Closure;
    
-class IsAdmin
+class IsMitra
 {
     /**
      * Handle an incoming request.
@@ -15,7 +15,7 @@ class IsAdmin
      */
     public function handle($request, Closure $next)
     {
-        if(auth()->user()->is_mitra == 1){
+        if(auth()->user()->is_admin == 1){
             return $next($request);
         }
    
