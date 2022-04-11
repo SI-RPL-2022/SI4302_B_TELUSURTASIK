@@ -1,10 +1,10 @@
 <?php
-   
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-   
-class CreateUsersTable extends Migration
+
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,19 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
+        Schema::create('mitras', function (Blueprint $table) {
+            $table->id('id_mitra');
             $table->string('name');
             $table->string('email');
             $table->timestamp('email_verified_at')->nullable();
-            $table->boolean('is_admin')->default(0);
-            $table->string('no_hp', 13);
+            $table->boolean('is_mitra')->nullable();
             $table->string('password');
-            $table->string('photo_user')->default('default.png');
+            $table->string('photo_mitra');
             $table->rememberToken();
             $table->timestamps();
         });
     }
-  
+
     /**
      * Reverse the migrations.
      *
@@ -34,6 +33,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('mitras');
     }
-}
+};
