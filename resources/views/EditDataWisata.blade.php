@@ -36,6 +36,7 @@
       <select id="status" name="status" class="form-control" required>
         <option selected value="{{$data->status}}"></option>
         <option>Accept</option>
+        
       </select>
   </div>
   

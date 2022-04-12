@@ -61,7 +61,12 @@ class WisataController extends Controller
         return redirect('DataWisataPending');
     }
 
-    
+    public function DeleteWisataData($id) {
+
+        DB::table('wisatas')->where('id_wisata',$id)->delete();
+
+        return redirect('DataWisataPending');
+    }
 }
 
 

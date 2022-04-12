@@ -33,3 +33,5 @@ Route::post('/DataWisataUpdate',[WisataController::class, 'EditWisataData']);
 
 Route::get('/DeleteDataUser/{id}',[UserController::class, 'DeleteDataUser']);
 Route::get('/DeleteDataMitra/{id}',[UserController::class, 'DeleteDataMitra']);
+
+Route::get('/DeleteDataWisata/{id}', [WisataController::class, 'DeleteWisataData']);

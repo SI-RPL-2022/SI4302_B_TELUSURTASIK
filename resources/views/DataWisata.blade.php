@@ -9,13 +9,13 @@
 		<div class="card">
 			<img src="{{asset('images/'.$row->picture)}}" style="height:250px" class="card-img-top" alt="{{$row->title}}">
  
-			<div class="card-body">
+			<div class="card-body" style="height:200px">
 				<div class="card-title"><h4>{{$row->title}}</h4></div>
 				{{$row->desc}}
 			</div>
  
 			<div class="card-footer">
-        	<a href="{{url('/EditDataWisata/'.$row->id_wisata)}}" class="btn btn-warning col-md-12 text-center">Menunggu</a>
+        	<a href="{{url('/EditDataWisata/'.$row->id_wisata)}}" class="btn btn-primary col-md-12 text-center">Lihat</a>
 			</div>
 		</div>
 	</div>
