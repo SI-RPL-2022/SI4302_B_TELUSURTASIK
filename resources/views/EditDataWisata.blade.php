@@ -1,43 +1,44 @@
-@extends('partials.navbar2')
+@extends('partials.Navbar2')
 
 @section('content')
 <h1>{{$title}}</h1>
 
-<form style="margin-top:20px">
+<form style="margin-top:20px" action="/DataWisataUpdate" method="post">
+  {{ csrf_field() }}
+  
   <div class="form-group">
-    <label for="">Edit Gambar</label>
-    <input type="file" class="form-control-file" id="">
+    <label for="id">Id Wisata</label>
+    <input type="text" class="form-control" id="id" name="id_wisata" readonly aria-describedby="" value="{{$data->id_wisata}}" placeholder="" required>
   </div>
   <div class="form-group">
-    <label for="">Title</label>
-    <input type="email" class="form-control" id="" aria-describedby="emailHelp" placeholder="Ini nanti isi yang ada di database">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" name="title" aria-describedby="" value="{{$data->title}}" placeholder="" required>
   </div>
   <div class="form-group">
-      <label for="">Kategori</label>
-      <select id="" class="form-control">
-        <option selected>Ini nanti isi yang ada di database</option>
+      <label for="kategori">Kategori</label>
+      <select id="kategori" name="categorie" class="form-control" required>
+        <option selected value="{{$data->categorie}}"></option>
         <option>Curug</option>
-		<option>Pantai</option>
-		<option>Pemandangan</option>
+		    <option>Pantai</option>
+		    <option>Pemandangan</option>
       </select>
   </div>
   <div class="form-group">
-    <label for="">Location</label>
-    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Ini nanti isi yang ada di database">
+    <label for="location">Location</label>
+    <input type="text" class="form-control" id="location" name="location" aria-describedby="" value="{{$data->location}}" placeholder="" required>
   </div>
   <div class="form-group">
-    <label for="">Deskripsi</label>
-    <textarea class="form-control" id="" rows="3" placeholder="Ini nanti isi yang ada di database"></textarea>
+    <label for="deskripsi">Deskripsi</label>
+    <textarea class="form-control" id="deskripsi" name="desc" rows="15" value="" placeholder="" required>{{$data->desc}}</textarea>
   </div>
-  
   <div class="form-group">
-      <label for="">Status</label>
-      <select id="" class="form-control">
-        <option selected>Ini nanti isi yang ada di database(Pending)</option>
-        <option>Accepted</option>
+      <label for="status">Status</label>
+      <select id="status" name="status" class="form-control" required>
+        <option selected value="{{$data->status}}"></option>
+        <option>Accept</option>
       </select>
   </div>
   
-  <a href="{{url('/DataWisata')}}" class="btn btn-primary col-md-12 text-center" style="margin-top:20px">Submit</a>
+  <input type="submit" value="Submit"  style="margin-top:20px">
 </form>
 @endsection

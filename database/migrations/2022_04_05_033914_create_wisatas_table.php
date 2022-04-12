@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('categorie');
             $table->text('location');
             $table->text('desc');
-            $table->string('status');
+            $table->string('status')->default('Pending');
             $table->string('picture');
             $table->timestamps();
         });

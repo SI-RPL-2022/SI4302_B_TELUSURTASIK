@@ -13,7 +13,7 @@ class UserController extends Controller
 
         $user = DB::table('users')
             ->select('*')
-            ->where('is_admin','=',1)
+            ->where('is_admin','=',0)
             ->get();
         return view('DataUser')->with([
     		'title' => 'Data User',
@@ -26,10 +26,10 @@ class UserController extends Controller
 
         $user = DB::table('users')
             ->select('*')
-            ->where('is_admin','=',0)
+            ->where('is_admin','=',1)
             ->get();
-        return view('DataUser')->with([
-    		'title' => 'Data User',
+        return view('DataMitra')->with([
+    		'title' => 'Data Mitra',
             'data' => $user
     	]);
 
@@ -40,23 +40,37 @@ class UserController extends Controller
         $user = userModel::find($id);
 
         return view('EditDataMitraUser')->with([
-            'title' => 'Edit Data User',
+            'title' => 'Edit Data',
             'data' => $user
         ]);
         
     
     }
 
+    public function EditUserData(Request $request)
+    {
+        
+        DB::table('users')->where('id',$request->id)->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'no_hp' => $request->no_hp
+        ]);
+
+        return redirect('DataUser');
+    }  
     
-    
+    public function DeleteDataUser($id) {
+
+        DB::table('users')->where('id',$id)->delete();
+
+        return redirect('DataUser');
+    }
+
+    public function DeleteDataMitra($id) {
+
+        DB::table('users')->where('id',$id)->delete();
+
+        return redirect('DataMitra');
+    }
+        
 }
-
-//public function showMitraData() {
-
-//    $mitra = UserModel::get();
-//    return view('DataMitra')->with([
-//        'title' => 'Data Mitra',
-//        'data' => $mitra
-//    ]);
-
-//}

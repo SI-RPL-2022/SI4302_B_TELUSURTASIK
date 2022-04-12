@@ -27,7 +27,7 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
+    <!-- Stylesheet -->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
 </head>
 
@@ -66,8 +66,13 @@
                     </div>
                     <a href="" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Dashboard</a>
                     <a href="" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Customer Service</a>
-                    <a href="{{url('/DataWisata')}}" class="nav-item nav-link"><i class="fa fa-file-alt me-2"></i>Pending Wisata</a>
-
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-file-alt me-2"></i>Data Wisata</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="{{url('/DataWisata')}}" class="dropdown-item">Data Wisata</a>
+                            <a href="{{url('/DataWisataPending')}}" class="dropdown-item">Data Wisata Pending</a>       
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -90,7 +95,6 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">My Profile</a>
-                            <a href="#" class="dropdown-item">Settings</a>
                             <a href="#" class="dropdown-item">Log Out</a>
                         </div>
                     </div>
@@ -121,7 +125,7 @@
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Template Javascript -->
+    <!-- Javascript -->
     <script src="js/main.js"></script>
 </body>
 

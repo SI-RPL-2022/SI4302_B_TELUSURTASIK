@@ -8,11 +8,24 @@ use Illuminate\Support\Facades\DB;
 
 class WisataController extends Controller
 {
-    public function showWisataData() {
+    public function showWisataDataPending() {
 
         $wisata = DB::table('wisatas')
             ->select('*')
             ->where('status','=','Pending')
+            ->get();
+        return view('DataWisataPending')->with([
+            'title' => 'Data Wisata',
+            'data' => $wisata
+        ]);
+    
+    }
+
+    public function showWisataData() {
+
+        $wisata = DB::table('wisatas')
+            ->select('*')
+            ->where('status','=','Accept')
             ->get();
         return view('DataWisata')->with([
             'title' => 'Data Wisata',
@@ -31,6 +44,21 @@ class WisataController extends Controller
         ]);
         
     
+    }
+
+    public function EditWisataData(Request $request)
+    {
+        
+        DB::table('wisatas')->where('id_wisata',$request->id_wisata)->update([
+            'title' => $request->title,
+            'categorie' => $request->categorie,
+            'location' => $request->location,
+            'desc' => $request->desc,
+            'status' => $request->status
+        
+        ]);
+
+        return redirect('DataWisataPending');
     }
 
     
