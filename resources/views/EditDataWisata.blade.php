@@ -20,7 +20,10 @@
         <option selected value="{{$data->categorie}}"></option>
         <option>Curug</option>
 		    <option>Pantai</option>
-		    <option>Pemandangan</option>
+		    <option>Danau</option>
+        <option>Caffe</option>
+        <option>Wisata Sejarah</option>
+        <option>Taman</option>
       </select>
   </div>
   <div class="form-group">
