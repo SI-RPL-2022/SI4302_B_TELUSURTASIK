@@ -5,31 +5,23 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardPostsController;
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+// -----------------------------MITRA----------------------------------
+
+Route::resource('wisatas', DashboardPostsController::class);
+Route::get('/Mitra', [DashboardPostsController::class, 'index']);
+
+Route::get('/TambahWisata',[DashboardPostsController::class, 'create']);
+Route::post('/TambahWisata',[DashboardPostsController::class, 'store']);
+
+Route::get('/dashboard',[DashboardPostsController::class, 'index']);
+Route::get('/Detail/{id}',[DashboardPostsController::class, 'show']);
+
+Route::get('/EditWisata/{id}', [DashboardPostsController::class, 'edit']);
+Route::patch('/EditWisata', [DashboardPostsController::class, 'update']);
+Route::get('/Delete/{id}', [DashboardPostsController::class, 'delete']);
 
 
-Route::get('/Detail', function () {
-    return view('Mitra/Detail');
-});
+Route::resource('/dashboard', DashboardPostsController::class);
 
-Route::get('/TambahWisata', function () {
-    return view('Mitra/TambahWisata');
-});
-
-Route::get('/Edit', function () {
-    return view('Mitra/EditWisata');
-});
-
-
-
-
-
-Route::get('/dashboard',function(){
-    return view('Mitra/dashboard/index');
-});
-
-
-
-Route::resource('/TambahWisata', DashboardPostsController::class);
+//------------------------------------------------------------------------------

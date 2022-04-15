@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\TambahWisata;
+
+use Illuminate\Support\Facades\DB;
+use App\Models\wisata;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Str;
+
 
 
 class DashboardPostsController extends Controller
@@ -15,82 +20,122 @@ class DashboardPostsController extends Controller
      */
     public function index()
     {
-        return view('Mitra.dashboard.index');
+      $wisata = Wisata::latest()->get();
 
+      return view('Mitra.dashboard.index', compact('wisata'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        return view('Mitra.TambahWisata');
+     return view('Mitra.TambahWisata');
+   }
+
+
+   public function store(Request $request)
+   {
+
+    $validatedData = $request->validate([
+      'title' => 'required',
+      'categorie' => 'required',
+      'location' => 'required',
+      'desc' => 'required',
+      'picture' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+
+    ]);
+
+    //upload picture
+    $file= $request->file('picture');
+    $fileNameToStore = $request->file('picture')->getClientOriginalName();
+
+    $file->move(public_path('img'), $fileNameToStore);
+
+    $insertwisata = wisata::create([
+      'title' => $request->title,
+      'categorie' => $request->categorie,
+      'location' => $request->location,
+      'desc' => $request->desc,
+      'picture'     => $fileNameToStore
+    ]);
+
+    if($insertwisata){
+      return redirect('/dashboard');
+    }else{
+      return redirect('/dashboard');
+    }
+  }
+
+
+  public function show($id)
+  {
+    $wisata = wisata::find($id);
+
+    return view('Mitra.Detail')->with([
+      'data' => $wisata
+    ]);
+  }
+
+
+  public function edit($id)
+  {
+    $wisata = wisata::find($id);
+    return view('Mitra/EditWisata',['dt' => $wisata]);
+
+  }
+
+  public function update(Request $request, wisata $wisata){
+    $validatedData = $request->validate([
+      'title' => 'required',
+      'categorie' => 'required',
+      'location' => 'required',
+      'desc' => 'required'
+    ]);
+
+    //get data wisata by ID
+    $id_wisata = $request->id_wisata;
+    $wisata = wisata::findOrFail($id_wisata);
+
+    if($request->file('picture') == "") {
+
+      $wisata->update([
+        'title' => $request->title,
+        'categorie' => $request->categorie,
+        'location' => $request->location,
+        'desc' => $request->desc
+      ]);
+
+    } else {
+
+      //upload picture
+      $file= $request->file('picture');
+      $fileNameToStore = $request->file('picture')->getClientOriginalName();
+
+      $file->move(public_path('img'), $fileNameToStore);
+
+      $wisata->update([
+        'title' => $request->title,
+        'categorie' => $request->categorie,
+        'location' => $request->location,
+        'desc' => $request->desc,
+        'picture'     => $fileNameToStore
+      ]);
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        $data = $request->validate([
-            'nama_wisata' => 'required',
-            'nama' => 'required',
-            'no_hp' => 'required',
-            'jam' => 'required',
-            'alamat' => 'required',
-            'deskripsi' => 'required',
-        ]);
-        TambahWisata::create($data);
-        return redirect()->route('Mitra/dashboard/index');
+    if($wisata){
+      return redirect('/dashboard');
+    }else{
+      return redirect('/dashboard');
     }
+  }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\TambahWisata  $tambahWisata
-     * @return \Illuminate\Http\Response
-     */
-    public function show(TambahWisata $tambahWisata)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\TambahWisata  $tambahWisata
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(TambahWisata $tambahWisata)
-    {
-        //
-    }
+  public function delete($id){
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\TambahWisata  $tambahWisata
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, TambahWisata $tambahWisata)
-    {
-        //
-    }
+    $wisata = wisata::find($id);
+    $wisata->delete();
+    return redirect('/dashboard');
+  }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\TambahWisata  $tambahWisata
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(TambahWisata $tambahWisata)
-    {
-        //
-    }
+
+
 }

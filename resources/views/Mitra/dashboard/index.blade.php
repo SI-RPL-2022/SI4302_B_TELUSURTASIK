@@ -67,8 +67,8 @@
         <h1 class="h2">Data Wisata</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
-            <button type="button" class="btn btn-sm btn-outline-secondary">
-                <a class="nav-link active" aria-current="page" href="{{ route('TambahWisata.create')}}" style="color:#7AC678;">Tambah Wisata</a>
+            <button type="button" class="btn btn-sm btn-outline-secondary" style="color:#7AC678; ">
+                <a class="nav-link active" aria-current="page" href="/TambahWisata" >Tambah Wisata</a>
             </button>
             
           </div>
@@ -76,19 +76,23 @@
       </div>
 
       <div class="row my-2">
-
+ 
+      @foreach ($wisata as $item)
       
-
+      <div class="col-md-4 col-sm-12 mb-3">
           <div class="card" style="width: 18rem;">
-            <img src="https://drive.google.com/uc?export=view&id=1nyvK76AH74m-8sxpyMcH9emjpSEPef0i" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="/Detail" class="btn btn-primary">Detail <span data-feather="arrow-right"></span></a>
+            <img src="{{asset('img/'.$item->picture)}}" value="logo" class="card-img-top" alt="..." style="height:250px">
+            
+            <div class="card-body" style="height:200px">
+              <h5 class="card-title">{{ $item->title}}</h5>
+              <p class="card-text">{{ $item->desc}}</p>
+              <a href="{{url('/Detail/'.$item->id_wisata)}}" class="btn btn-primary" style='margin-top: auto;'>Detail <span data-feather="arrow-right"></span></a>
             </div>
           </div>
+      </div>
 
-
+      @endforeach
+      
       
           
         </div>
