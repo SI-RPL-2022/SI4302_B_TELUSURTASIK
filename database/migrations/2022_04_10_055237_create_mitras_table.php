@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id('id_mitra');
             $table->string('name');
             $table->string('email');
-            $table->string('role');
             $table->timestamp('email_verified_at')->nullable();
             $table->boolean('is_mitra')->nullable();
             $table->string('password');

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('categorie');
             $table->text('location');
             $table->text('desc');
+            $table->string('status');
             $table->string('picture');
             $table->timestamps();
         });

@@ -16,38 +16,52 @@ class Wisata extends Seeder
     {
         $wisata = [
             [
-                'title' => 'Curug Beng-beng',
+                'id_wisata'=>'1',
+                'title' => 'Curug Deng-deng',
                 'categorie' => 'Curug',
                 'location' => 'Cipatujah',
-                'picture' => '1.jpg',
+                'desc'=> 'Curug Deng-deng adalah ...',
+                'status'=>'pending',
+                'picture' => 'wisata1.jpg',
             ],
             [
-                'title' => 'Wiewdeck Galunggung',
+                'id_wisata'=>'2',
+                'title' => 'Viewdeck Galunggung',
                 'categorie' => 'Pegunungan',
                 'location' => 'Galunggung',
-                'picture' => '2.jpg',
+                'desc'=> 'Viewdeck galunggung adalah ...',
+                'status'=>'pending',
+                'picture' => 'wisata5.jpg',
             ],
             [
+                'id_wisata'=>'3',
                 'title' => 'Pantai Karang Tawulan',
                 'categorie' => 'Pantai',
                 'location' => 'Cimanuk,Kec Cikalong',
-                'picture' => '3.jpg',
+                'desc'=> 'Pantai Karangtawulan adalah ...',
+                'status'=>'pending',
+                'picture' => 'wisata2.jpg',
             ],
             [
-                'title' => 'Curug Panetean',
-                'categorie' => 'Curug',
-                'location' => 'Pangilaran,kec Pancatengah',
-                'picture' => '4.jpg',
+                'id_wisata'=>'4',
+                'title' => 'Karaha Bodas',
+                'categorie' => 'Kawah',
+                'location' => 'Kadipaten',
+                'desc'=> 'Karaha Bodas adalah ...',
+                'status'=>'pending',
+                'picture' => 'wisata6.jpg',
             ],
             [
+                'id_wisata'=>'5',
                 'title' => 'Tonjong Canyon',
                 'categorie' => 'Sungai',
-                'location' => 'Tanjungsari,Cipatujah',
-                'picture' => '5.jpg',
+                'location' => 'Cipatujah',
+                'desc'=> 'Tonjong Canyon adalah ...',
+                'status'=>'Accepted',
+                'picture' => 'wisata4.jpg',
             ],
         ];
         // foreach ($wisata as $key => $value) {
-        //     Wisata::create($value);
-        // }
+        //     Wisata::create($value);}
     }
 }
