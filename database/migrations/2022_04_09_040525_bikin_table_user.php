@@ -4,11 +4,11 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-<<<<<<< HEAD:database/migrations/2022_04_09_040525_bikin_table_user.php
+
+
+
 class BikinTableUser extends Migration
-=======
-return new class extends Migration
->>>>>>> origin/main:database/migrations/2014_10_12_000000_create_users_table.php
+
 {
     /**
      * Run the migrations.

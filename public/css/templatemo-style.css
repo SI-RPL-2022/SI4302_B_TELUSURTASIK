@@ -163,6 +163,9 @@ https://templatemo.com/tm-516-known
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Denayu
   /* #team,
   #about {
     background: #f9f9f9;
@@ -171,6 +174,7 @@ https://templatemo.com/tm-516-known
   #team,
   #courses {
     background: #b6e2b5;
+<<<<<<< HEAD
 =======
   #team,
   #about {
@@ -192,6 +196,8 @@ https://templatemo.com/tm-516-known
     margin-left: 30px;
     margin-right: 30px;
 >>>>>>> origin/main
+=======
+>>>>>>> origin/Denayu
   }
 
   #team, 
@@ -292,6 +298,7 @@ https://templatemo.com/tm-516-known
       MENU              
   -----------------------------------------*/
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   .custom_nav-container .navbar-nav {
@@ -303,6 +310,9 @@ https://templatemo.com/tm-516-known
     margin: 5px 0;
   }
 >>>>>>> origin/main
+=======
+
+>>>>>>> origin/Denayu
   .custom-navbar {
     background: #ffffff;
     border-top: 5px solid #7AC678;
@@ -476,6 +486,7 @@ https://templatemo.com/tm-516-known
       ABOUT              
   -----------------------------------------*/
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   #about .info{
     margin-bottom: 15px;
@@ -501,15 +512,21 @@ https://templatemo.com/tm-516-known
           padding-bottom: 10px;
       }
 >>>>>>> origin/main
+=======
+>>>>>>> origin/Denayu
 
   #about figure {
     display: inline-block;
     vertical-align: top;
 <<<<<<< HEAD
+<<<<<<< HEAD
     margin-left: 15px;
 =======
     margin-left: 5px;
 >>>>>>> origin/main
+=======
+    margin-left: 15px;
+>>>>>>> origin/Denayu
   }
 
   #about figure span {
@@ -532,6 +549,7 @@ https://templatemo.com/tm-516-known
   }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   /*---------------------------------------
@@ -591,6 +609,8 @@ https://templatemo.com/tm-516-known
       color: #FBB667;
   }
 >>>>>>> origin/main
+=======
+>>>>>>> origin/Denayu
 
   /*---------------------------------------
       TEAM              
@@ -702,10 +722,14 @@ https://templatemo.com/tm-516-known
     vertical-align: middle;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   
 >>>>>>> origin/main
+=======
+
+>>>>>>> origin/Denayu
   .courses-author img {
     display: inline-block !important;
     border-radius: 50px;
@@ -717,10 +741,14 @@ https://templatemo.com/tm-516-known
   .courses-price {
     float: right;
 <<<<<<< HEAD
+<<<<<<< HEAD
     margin-top: 10px;
 =======
     /* margin-top: 3px; */
 >>>>>>> origin/main
+=======
+    margin-top: 10px;
+>>>>>>> origin/Denayu
   }
 
   .courses-price span {
@@ -735,6 +763,7 @@ https://templatemo.com/tm-516-known
     background: #3f51b5;
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -764,6 +793,9 @@ https://templatemo.com/tm-516-known
       color: #FBB667;
   }
 >>>>>>> origin/main
+=======
+
+>>>>>>> origin/Denayu
 
   /*---------------------------------------
      NEWS              
@@ -911,6 +943,9 @@ https://templatemo.com/tm-516-known
   -----------------------------------------*/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Denayu
   /* footer {
     background: #ecfdf1;
     padding: 20px 0;
@@ -1000,8 +1035,11 @@ https://templatemo.com/tm-516-known
 
  */
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/Denayu
 /* footer */
     body{margin-top:20px;}
     .deneb_footer .widget_wrapper {
@@ -1031,12 +1069,16 @@ https://templatemo.com/tm-516-known
     }
     .deneb_footer .widget_wrapper .widegt_about p {
 <<<<<<< HEAD
+<<<<<<< HEAD
         margin-bottom: 20px;
 =======
         margin-top: 10px;
         margin-bottom: 15px;
         margin-left: 7px;
 >>>>>>> origin/main
+=======
+        margin-bottom: 20px;
+>>>>>>> origin/Denayu
     }
     .deneb_footer .widget_wrapper .widegt_about .social li {
         display: inline-block;
@@ -1347,8 +1389,12 @@ https://templatemo.com/tm-516-known
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
   
 
 >>>>>>> origin/main
+=======
+  
+>>>>>>> origin/Denayu
