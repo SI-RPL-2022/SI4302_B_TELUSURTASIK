@@ -1,3 +1,10 @@
+@extends('partials.navbar')
+@extends('partials.footer')
+
+@section('home')
+active
+@endsection
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,29 +25,12 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/help.css">
-    {{-- <link rel="stylesheet" href="css/style.css"> --}}
-    
+
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/templatemo-style.css">
 
 </head>
-    <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
-        @include('partials.navbar')
-     
-            @yield('content')
-    
-        @include('partials.footer')
-
-    <script src="js/script.js"></script>
-    <!-- SCRIPTS -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+    <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+    <h1>Wisata</h1>
 </body>
 </html>
