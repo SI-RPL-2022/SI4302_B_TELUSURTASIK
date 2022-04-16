@@ -27,3 +27,11 @@ Route::get('/about', function () {
 Route::get('/help', function () {
     return view('help');
 });
+
+Route::get('/register', function () {
+    return view('register');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
