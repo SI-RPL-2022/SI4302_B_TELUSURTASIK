@@ -35,3 +35,7 @@ Route::get('/DeleteDataUser/{id}',[UserController::class, 'DeleteDataUser']);
 Route::get('/DeleteDataMitra/{id}',[UserController::class, 'DeleteDataMitra']);
 
 Route::get('/DeleteDataWisata/{id}', [WisataController::class, 'DeleteWisataData']);
+
+Route::get('/sidebarrahma', function(){
+    return view('partials.navbar3');
+});

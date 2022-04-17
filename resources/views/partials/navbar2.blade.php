@@ -25,10 +25,10 @@
     <link href="{{asset('lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css')}}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/bootstrapAdmin.min.css')}}" rel="stylesheet">
 
     <!-- Stylesheet -->
-    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('css/styleAdmin.css')}}" rel="stylesheet">
 </head>
 
 <body>
@@ -39,7 +39,7 @@
 
 
         <!-- Sidebar Start -->
-        <div class="sidebar pe-4 pb-3" >
+        <div class="sidebar pe-4 pb-3">
             <nav class="navbar navbar-light">
                 <!-- <a href="index.html" class="navbar-brand mx-4 mb-3"> -->
                 <a class="navbar-brand" href="#"><img src="{{asset('images/logo.png')}}" alt="TelusurTasik" class="rounded mx-auto d-block"></a>
@@ -80,15 +80,15 @@
 
 
         <!-- Content Start -->
-        <div class="content">
+        <div class="content" >
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
                 <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars"></i>
                 </a>
-                <div class="navbar-nav align-items-center ms-auto">
+                <div class="navbar-nav align-items-center ms-auto" >
                     
-                    <div class="nav-item dropdown">
+                    <div class="nav-item dropdown" >
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="{{asset('img/user.jpg')}}" alt="" style="width: 40px; height: 40px;">
                             <span class="d-none d-lg-inline-flex">Logout</span>
