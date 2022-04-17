@@ -47,7 +47,7 @@ class DashboardPostsController extends Controller
     $file= $request->file('picture');
     $fileNameToStore = $request->file('picture')->getClientOriginalName();
 
-    $file->move(public_path('img'), $fileNameToStore);
+    $file->move(public_path('images'), $fileNameToStore);
 
     $insertwisata = wisata::create([
       'title' => $request->title,
@@ -109,7 +109,7 @@ class DashboardPostsController extends Controller
       $file= $request->file('picture');
       $fileNameToStore = $request->file('picture')->getClientOriginalName();
 
-      $file->move(public_path('img'), $fileNameToStore);
+      $file->move(public_path('images'), $fileNameToStore);
 
       $wisata->update([
         'title' => $request->title,

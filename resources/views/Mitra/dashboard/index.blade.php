@@ -81,12 +81,13 @@
       
       <div class="col-md-4 col-sm-12 mb-3">
           <div class="card" style="width: 18rem;">
-            <img src="{{asset('img/'.$item->picture)}}" value="logo" class="card-img-top" alt="..." style="height:250px">
+            <img src="{{asset('images/'.$item->picture)}}" value="logo" class="card-img-top" alt="..." style="height:250px">
             
             <div class="card-body" style="height:200px">
               <h5 class="card-title">{{ $item->title}}</h5>
               <p class="card-text">{{ $item->desc}}</p>
               <a href="{{url('/Detail/'.$item->id_wisata)}}" class="btn btn-primary" style='margin-top: auto;'>Detail <span data-feather="arrow-right"></span></a>
+              <a href="{{url('/Detail/'.$item->id_wisata)}}" class="btn btn-warning" style='margin-top: auto; margin-left:30px;'>{{$item->status}} </a>
             </div>
           </div>
       </div>

@@ -84,7 +84,7 @@
                 <form style="margin-top:20px" action="/Detail" method="post">
                   {{ csrf_field() }}
 
-                  <img src="{{asset('img/'.$data->picture)}}" value="logo" class="card-img-top" alt="..." style="height:250px;width:350px;">
+                  <img src="{{asset('images/'.$data->picture)}}" value="logo" class="card-img-top" alt="..." style="margin-left:200px;margin-right:50px;height:300px; width:300px;">
                   <hr style="position: relative;
                   top: 20px;
                   border: none;
