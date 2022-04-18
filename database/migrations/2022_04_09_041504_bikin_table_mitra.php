@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class BikinTableMitra extends Migration
 {
     /**
      * Run the migrations.
@@ -15,16 +15,12 @@ return new class extends Migration
     {
         Schema::create('mitras', function (Blueprint $table) {
             $table->id('id_mitra');
-            $table->string('name');
-            $table->string('email');
-            $table->timestamp('email_verified_at')->nullable();
-            $table->boolean('is_mitra')->nullable();
+            $table->string('nama_mitra');
+            $table->string('email')->unique();
             $table->string('password');
-            $table->string('photo_mitra')->default('default.png');
-            $table->rememberToken();
-            $table->timestamps();
+            $table->string('no_hp');
+            $table->string('foto_mitra');
         });
-        
     }
 
     /**
@@ -36,4 +32,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('mitras');
     }
-};
+}

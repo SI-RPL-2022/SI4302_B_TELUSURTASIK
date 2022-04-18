@@ -4,7 +4,11 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+<<<<<<< HEAD:database/migrations/2022_04_09_040525_bikin_table_user.php
+class BikinTableUser extends Migration
+=======
 return new class extends Migration
+>>>>>>> origin/main:database/migrations/2014_10_12_000000_create_users_table.php
 {
     /**
      * Run the migrations.
@@ -13,18 +17,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('mitras', function (Blueprint $table) {
-            $table->id('id_mitra');
+        Schema::create('users', function (Blueprint $table) {
+            $table->id('id_user');
             $table->string('name');
-            $table->string('email');
-            $table->timestamp('email_verified_at')->nullable();
-            $table->boolean('is_mitra')->nullable();
+            $table->string('email')->unique();
             $table->string('password');
-            $table->string('photo_mitra')->default('default.png');
-            $table->rememberToken();
-            $table->timestamps();
+            $table->string('no_hp');
+            $table->string('foto_user');
         });
-        
     }
 
     /**
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mitras');
+        Schema::dropIfExists('users');
     }
 };

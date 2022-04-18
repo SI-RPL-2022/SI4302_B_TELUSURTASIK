@@ -59,7 +59,7 @@
                         <img class="card-img-top" src="{{ asset('assets/images/'. $wisata->picture) }}"
                             alt="tempat wisata" height="200" style="object-fit: cover">
                         <div class="card-body">
-                            <h5 class="card-title">{{ $wisata->title }} ({{ $wisata->location }})</h5>
+                            <h5 class="card-title">{{ $wisata->title }} </h5>
                             <p class="card-text">{{ $wisata->desc }}</p>
                         </div>
                         <div class="card-footer">
@@ -73,7 +73,7 @@
         </div>
         <div class="row">
             <div class="text-center col-md-12">
-                {{ $data->links() }}
+                
             </div>
         </div>
 

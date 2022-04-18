@@ -14,11 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/wisata', [WisataController::class, 'showWisataData'])->name('wisata.index');
-Route::get('/wisata/{wisata}/show', [WisataController::class, 'show'])->name('wisata.show');
 
-// ->name('wisata.index');
+Route::get('/wisata', [WisataController::class, 'index']);
+Route::get('/wisata/{wisata}/show', [WisataController::class, 'UserLookDetailWisata'])->name('wisata.show');
+Route::get('/wisatas', [WisataController::class, 'UserLookWisata'])->name('wisata.index');
