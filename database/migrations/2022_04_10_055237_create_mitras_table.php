@@ -20,7 +20,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->boolean('is_mitra')->nullable();
             $table->string('password');
-            $table->string('photo_mitra');
+            $table->string('photo_mitra')->default('default.png');
             $table->rememberToken();
             $table->timestamps();
         });
