@@ -1,6 +1,6 @@
     
     <!-- MENU -->
-        <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+    <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
         <div class="container">
              <div class="navbar-header">
                     <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -17,7 +17,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-nav-first">
                     <li><a href="/" class="smoothScroll">Home</a></li>
-                    <li><a href="/wisata" class="smoothScroll">Wisata</a></li>
+                    <li {{ Request::is('wisata*') ? 'active' : '' }}><a href="{{ route('wisata.index') }}" class="smoothScroll">Wisata</a></li>
                     <li><a href="/about" class="smoothScroll">About</a></li>
                     <li><a href="/help" class="smoothScroll">Help</a></li>
                 </ul>
@@ -36,9 +36,19 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
+                                @if(Auth::user()->is_admin==0)
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
+                                @elseif(Auth::user()->is_admin==1)
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('mitra.home') }}" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+                                @elseif(Auth::user()->is_admin==2)
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('admin.home') }}" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+                                @endif
                             </li>
                             <li>
                                 
@@ -55,8 +65,6 @@
                             </li>
                         @endguest
                     </ul>
-
-                </ul>
-            </div>
+                
 </div>
 </section>

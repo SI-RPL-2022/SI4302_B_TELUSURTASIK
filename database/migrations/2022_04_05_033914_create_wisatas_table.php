@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('wisatas', function (Blueprint $table) {
             $table->id('id_wisata');
-            $table->string('title')->nullable();
+            $table->string('title');
             $table->string('categorie');
             $table->text('location');
             $table->text('desc');
-            $table->String('status')->default('pending');
+            $table->string('status')->default('Pending');
             $table->string('picture');
             $table->timestamps();
         });
