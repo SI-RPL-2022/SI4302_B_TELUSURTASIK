@@ -1,11 +1,12 @@
 <?php
 
+use App\Http\Controllers\WisataController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\WisataController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DashboardPostsController;
 
 
 
@@ -60,7 +61,6 @@ Route::get('/admin/wisata/{wisata}/edit', [WisataController::class, 'edit']);
 Route::post('/admin/wisata/{wisata}', [WisataController::class, 'update']);
 Route::post('/admin/wisata/{wisata}/delete', [WisataController::class, 'destroy']);
 
-use App\Http\Controllers\DashboardPostsController;
 
 
 
@@ -82,4 +82,8 @@ Route::get('/Delete/{id}', [DashboardPostsController::class, 'delete']);
 
 Route::resource('/dashboard', DashboardPostsController::class);
 
-//------------------------------------------------------------------------------
+//------------------------------SEPTI------------------------------------------------
+
+Route::get('/wisata', [WisataController::class, 'index']);
+Route::get('/wisata/{wisata}/show', [WisataController::class, 'UserLookDetailWisata'])->name('wisata.show');
+Route::get('/wisatas', [WisataController::class, 'UserLookWisata'])->name('wisata.index');

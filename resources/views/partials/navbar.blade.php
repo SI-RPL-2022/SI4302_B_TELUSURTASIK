@@ -55,6 +55,8 @@
                             </li>
                         @endguest
                     </ul>
-                
+
+                </ul>
+            </div>
 </div>
 </section>
