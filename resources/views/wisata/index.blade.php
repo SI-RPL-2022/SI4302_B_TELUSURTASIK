@@ -29,16 +29,19 @@
 
         <div class="row mb-3">
             <div class="col-md-2 mb-3">
-                <form action="{{ route('wisata.index') }}" method="GET">
+                <form action="/kategoriWisata" method="post">
                     @csrf
 
                     <div class="input-group">
                         <select name="searchCategory" class="custom-select" id="inputGroupSelect04"
                             aria-label="Example select with button addon">
-                            <option selected value="">Choose Category...</option>
-                            <option value="Kawah">Kawah</option>
+                            <option selected value="All">Choose Category...</option>
+                            <option value="Curug">Curug</option>
                             <option value="Pantai">Pantai</option>
-                            <option value="Sungai">Sungai</option>
+                            <option value="Danau">Danau</option>
+                            <option value="Coffee">Caffee</option>
+                            <option value="Wisata Budaya">Wisata Budaya</option>
+                            <option value="Taman">Taman</option>
                         </select>
                         <div class="input-group-append">
                             <input class="btn btn-outline-secondary btn-info text-white" type="submit" />
@@ -50,25 +53,26 @@
                 <h3 class="text-center text-black font-weight-bold">Popular Destination</h4>
             </div>
         </div>
-
-        <div class="row mb-3">
-            <div class="card-deck" style="width: 100%">
-                @foreach ($data as $wisata)
-                <div class="col-md-4 mb-3">
-                    <div class="card" style="height: 100%">
-                        <img class="card-img-top" src="{{ asset('images/'. $wisata->picture) }}"
-                            alt="tempat wisata" height="200" style="object-fit: cover">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $wisata->title }} </h5>
-                            <p class="card-text">{{ $wisata->desc }}</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="{{ route('wisata.show', $wisata->id_wisata) }}"
-                                class="btn btn-success btn-block">Lihat Detail</a>
+        <div class="container">
+            <div class="row mb-3">
+                <div class="card-deck" style="width: 100%">
+                    @foreach ($data as $wisata)
+                    <div class="col-md-4 mb-3">
+                        <div class="card" style="height: 100%">
+                            <img class="card-img-top" src="{{ asset('images/'. $wisata->picture) }}"
+                                alt="tempat wisata" height="200" style="object-fit: cover">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $wisata->title }} </h5>
+                                <p class="card-text">{{ $wisata->desc }}</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="{{ route('wisata.show', $wisata->id_wisata) }}"
+                                    class="btn btn-success btn-block">Lihat Detail</a>
+                            </div>
                         </div>
                     </div>
+                    @endforeach
                 </div>
-                @endforeach
             </div>
         </div>
         <div class="row">

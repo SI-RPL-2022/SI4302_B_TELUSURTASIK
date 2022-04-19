@@ -100,4 +100,20 @@ class WisataController extends Controller
         return redirect('DataWisataPending');
     }
 
+
+    // kategori
+
+    public function showKategoriWisata(Request $request) {
+
+        $wisata = DB::table('wisatas')
+            ->select('*')
+            ->where('status','=','Accepted')
+            ->where('categorie','=',$request->searchCategory)
+            ->get();
+        return view('wisata.index')->with([
+            'data' => $wisata
+        ]);
+    
+    }
+
 }

@@ -21,8 +21,8 @@
         <option>Curug</option>
 		    <option>Pantai</option>
 		    <option>Danau</option>
-        <option>Caffe</option>
-        <option>Wisata Sejarah</option>
+        <option>Caffee</option>
+        <option>Wisata Budaya</option>
         <option>Taman</option>
       </select>
   </div>
