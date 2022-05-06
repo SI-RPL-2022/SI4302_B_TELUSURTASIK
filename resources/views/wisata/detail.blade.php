@@ -10,14 +10,16 @@
             </div>
             <div class="col-md-6">
                 <h4 class="font-weight-bold">{{ $data->title }}</h4>
-                <h5 class="subheading"> <i class="far fa-fw fa-heart"></i></h5>
-                <p class="py-3">
+                <i class="fa fa-map-marker"><h5 class="font-weight-bold">{{ $data->location }}</h5></i>
+                {{-- <p class="py-3">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
-                </p>
+                </p> --}}
+                <br>
+                <br>
                 <div class="row">
                     <div class="col-md-4 mb-2">
                         <a href="#" class="btn btn-success rounded btn-block">Berikan Ulasan</a>
@@ -26,15 +28,15 @@
                         <a href="{{ $data->location }}" class="btn btn-success rounded btn-block">Lihat Lokasi</a>
                     </div>
                     <div class="col-md-4 mb-2">
-                        <a href="#" class="btn btn-success rounded btn-block">Tambah Wishlist</a>
+                        <a href="#" class="btn btn-success rounded btn-block">Tambah Wishlist<i class="fa fa-fw fa-heart" style="color: red"></i></a>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="row mb-5">
-            <div class="col-md-12">
-                <h3>Deskripsi</h3>
+            <div class="col-md-6">
+                <h4>Deskripsi</h4>
                 <p class="text-muted">{{ $data->desc }}</p>
             </div>
         </div>

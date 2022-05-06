@@ -190,3 +190,54 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+
+/*---------------------------------------
+  CEK         
+-----------------------------------------*/
+.number {
+}
+.number .customer, .number .social {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	padding-left: 100px;
+	width: 325px;
+    margin-top: 60px;
+}
+.number h5 {
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 7px;
+	margin-left: 0px;
+}
+.number .customer a {
+	font-size: 24px;
+	color: #000000;
+	font-weight: 700;
+}
+.number .social a {
+	font-size: 12px;
+	color: rgb(58, 58, 58);
+	display: inline-block;
+	min-width: 105px;
+	margin-bottom: 15px;
+}
+.number .social a i {
+	margin-right: 5px;
+	font-size: 19px;
+}
+.number .social .box-icon {
+	padding: 15px 21px;
+}
+.number .box-icon {
+	color: rgb(0, 0, 0);
+	background-color: #FBB667;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	padding: 15px 25px;
+	text-transform: uppercase;
+	font-size: 30px;
+}

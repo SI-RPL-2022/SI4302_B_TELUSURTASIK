@@ -149,7 +149,7 @@ active
 
                                              <div class="courses-detail">
                                                   <h3><a href="#">{{ $wisatas->title }}</a></h3>
-                                                  <p><i class="fa fa-map-marker" aria-hidden="true"></i>{{ $wisatas->desc }}</p>
+                                                  <p><i class="fa fa-map-marker" aria-hidden="true"></i>{{ $wisatas->location }}</p>
                                              </div>
 
                                              <div class="courses-info">
