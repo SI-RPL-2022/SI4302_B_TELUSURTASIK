@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('categorie');
             $table->text('location');
+            $table->text('maps');
             $table->text('desc');
             $table->string('status')->default('Pending');
             $table->string('picture');

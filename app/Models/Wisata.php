@@ -20,7 +20,8 @@ class Wisata extends Model
         'status',
     	'picture',
         'created_at',
-        'updated_at'
+        'updated_at',
+        'maps'
     ];
 
     // use HasFactory;

@@ -19,6 +19,7 @@ class WisataModel extends Model
     	'desc',
     	'picture',
         'created_at',
-        'updated_at'
+        'updated_at',
+        'maps'
     ];
 }

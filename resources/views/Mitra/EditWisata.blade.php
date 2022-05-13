@@ -136,6 +136,18 @@
                     @enderror
                   </div>
                   <div class="form-group">
+                    <label for="maps">Maps</label>
+                    <input type="text" class="form-control @error('maps')is-invalid @enderror" id="maps" name="maps" aria-describedby="" value="{{$dt->maps}}">
+
+                    @error('maps')
+
+                    <div class="invalid-feedback">
+                      {{$message}}
+                    </div>
+
+                    @enderror
+                  </div>
+                  <div class="form-group">
                     <label for="deskripsi">Deskripsi</label>
                     <textarea class="form-control @error('desc')is-invalid @enderror" id="deskripsi" name="desc" rows="3">{{$dt->desc}}</textarea>
 

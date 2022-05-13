@@ -136,6 +136,19 @@
                   </div>
 
                   <div class="mb-3">
+                    <label for="maps" class="form-label" style="font-weight:bold;">Maps</label>
+                    <input type="text" class="form-control @error('maps')is-invalid @enderror" id="maps" name="maps" placeholder="Masukkan link lokasi">
+
+                    @error('maps')
+
+                    <div class="invalid-feedback">
+                      {{$message}}
+                    </div>
+
+                    @enderror
+                  </div>
+
+                  <div class="mb-3">
                     <label for="desc" class="form-label" style="font-weight:bold;">Deskripsi</label>
                     <textarea class="form-control @error('desc')is-invalid @enderror" id="desc" rows="3" id="desc" name="desc" placeholder="..."></textarea>
 

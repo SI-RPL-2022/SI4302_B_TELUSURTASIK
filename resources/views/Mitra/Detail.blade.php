@@ -111,6 +111,10 @@
                     <h6>{{$data->location}}</h6>
                   </div>
                   <div class="form-group">
+                    <label for="maps" style="font-size:0.5cm;">Maps  :</label>
+                    <h6>{{$data->maps}}</h6>
+                  </div>
+                  <div class="form-group">
                     <label for="deskripsi" style="font-size:0.5cm;"> Deskripsi  :</label>
                     <h6>{{$data->desc}}</h6>
                   </div>
