@@ -22,7 +22,7 @@
                 <br>
                 <div class="row">
                     <div class="col-md-4 mb-2">
-                        <a href="#" class="btn btn-success rounded btn-block">Berikan Ulasan</a>
+                        <a href="/review" class="btn btn-success rounded btn-block">Berikan Ulasan</a>
                     </div>
                     <div class="col-md-4 mb-2">
                         <a href="{{ $data->location }}" class="btn btn-success rounded btn-block">Lihat Lokasi</a>

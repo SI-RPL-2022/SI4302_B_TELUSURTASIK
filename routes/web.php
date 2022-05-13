@@ -94,3 +94,6 @@ Route::resource('wisatas', DashboardPostsController::class)->middleware('is_mitr
 
 
 
+Route::get('/review', function () {
+    return view('wisata.review');
+});
