@@ -9,10 +9,11 @@ class Help extends Model
 {
     protected $table = 'helps';
 
-    // protected $primaryKey = 'id';
+    protected $primaryKey = 'id_question';
 
     protected $fillable = [
     	'title',
-    	'desc',
+        'categories',
+    	'desc'
     ];
 }
