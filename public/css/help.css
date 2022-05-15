@@ -106,6 +106,14 @@ display: none;
     background-color: #FBB667;
     border-color: #FBB667;
 }
+.btn:hover {
+    background-color: #FBB667;
+    border-color: #FBB667;
+    transition: 0.40s;
+}
+.btn:active {
+    background-color: #f09630;
+}
 .shadow-sm {
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
 }
