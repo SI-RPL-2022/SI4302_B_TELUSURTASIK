@@ -58,6 +58,14 @@ Route::post('/DataWisataUpdate', [WisataController::class, 'EditWisataData'])->m
 Route::get('/DeleteDataUser/{id}', [UserController::class, 'DeleteDataUser'])->middleware('is_admin');
 Route::get('/DeleteDataMitra/{id}', [UserController::class, 'DeleteDataMitra'])->middleware('is_admin');
 Route::get('/DeleteDataWisata/{id}', [WisataController::class, 'DeleteWisataData'])->middleware('is_admin');
+Route::get('/Help', [HelpController::class, 'showHelpData'])->middleware('is_admin');
+Route::get('/TambahBantuan', [HelpController::class, 'create'])->middleware('is_admin');
+Route::post('/SimpanBantuan', [HelpController::class, 'store'])->middleware('is_admin');
+Route::get('/EditBantuan/{id}', [HelpController::class, 'edit'])->middleware('is_admin');
+Route::post('/UpdateBantuan/{id}', [HelpController::class, 'update'])->middleware('is_admin');
+Route::get('/DeleteBantuan/{id}', [HelpController::class, 'delete'])->middleware('is_admin');
+Route::get('/HelpUser', [MainController::class, 'showBantuanUser']);
+Route::get('/HelpMitra', [MainController::class, 'showBantuanMitra']);
 
 #cici landing page
 Auth::routes();

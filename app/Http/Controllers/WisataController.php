@@ -85,6 +85,7 @@ class WisataController extends Controller
             'title' => $request->title,
             'categorie' => $request->categorie,
             'location' => $request->location,
+            'maps' => $request->maps,
             'desc' => $request->desc,
             'status' => $request->status
         

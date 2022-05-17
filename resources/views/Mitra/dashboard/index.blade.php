@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>Dashboard Mitra</title>
+    <title>DASHBOARD | Mitra</title>
     
 
     <!-- Bootstrap core CSS -->
@@ -52,7 +52,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{url('/HelpMitra')}}">
               <span data-feather="help-circle"></span>
               Customer Service
             </a>

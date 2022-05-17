@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Dashboard Mitra</title>
+  <title>Tambah Wisata</title>
 
 
   <!-- Bootstrap core CSS -->
@@ -127,6 +127,19 @@
                     <input type="text" class="form-control @error('location')is-invalid @enderror" id="location" name="location" placeholder="alamat">
 
                     @error('location')
+
+                    <div class="invalid-feedback">
+                      {{$message}}
+                    </div>
+
+                    @enderror
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="maps" class="form-label" style="font-weight:bold;">Maps</label>
+                    <input type="text" class="form-control @error('maps')is-invalid @enderror" id="maps" name="maps" placeholder="Masukkan link lokasi">
+
+                    @error('maps')
 
                     <div class="invalid-feedback">
                       {{$message}}

@@ -25,7 +25,7 @@
                         <a href="#" class="btn btn-success rounded btn-block">Berikan Ulasan</a>
                     </div>
                     <div class="col-md-4 mb-2">
-                        <a href="{{ $data->location }}" class="btn btn-success rounded btn-block">Lihat Lokasi</a>
+                        <a href="{{ $data->maps}}" class="btn btn-success rounded btn-block">Lihat Lokasi</a>
                     </div>
                     <div class="col-md-4 mb-2">
                         <a href="#" class="btn btn-success rounded btn-block">Tambah Wishlist<i class="fa fa-fw fa-heart" style="color: red"></i></a>

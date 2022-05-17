@@ -18,8 +18,8 @@
                 <ul class="nav navbar-nav navbar-nav-first">
                     <li><a href="/" class="smoothScroll">Home</a></li>
                     <li {{ Request::is('wisata*') ? 'active' : '' }}><a href="{{ route('wisata.index') }}" class="smoothScroll">Wisata</a></li>
-                    <li><a href="/about" class="smoothScroll">About</a></li>
-                    <li><a href="/help" class="smoothScroll">Help</a></li>
+                    <li><a href="{{ url('/about') }}" class="smoothScroll">About</a></li>
+                    <li><a href="{{ url('/HelpUser') }}" class="smoothScroll">Help</a></li>
                 </ul>
                     <ul class="nav navbar-nav navbar-right">
                         @guest

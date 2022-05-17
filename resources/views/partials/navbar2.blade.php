@@ -64,8 +64,6 @@
                             <a href="{{url('/DataMitra')}}" class="dropdown-item">Data Mitra</a>
                         </div>
                     </div>
-                    <a href="" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Dashboard</a>
-                    <a href="" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Customer Service</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-file-alt me-2"></i>Data Wisata</a>
                         <div class="dropdown-menu bg-transparent border-0">
@@ -73,6 +71,9 @@
                             <a href="{{url('/DataWisataPending')}}" class="dropdown-item">Data Wisata Pending</a>       
                         </div>
                     </div>
+                    <a href="" class="nav-item nav-link"><i class="bi bi-pencil-square me-2"></i>Kelola Ulasan</a>
+                    <a href="" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Dashboard</a>
+                    <a href="{{ url('/Help') }}" class="nav-item nav-link"><i class="bi bi-question-diamond-fill me-2"></i>Help</a>
                 </div>
             </nav>
         </div>

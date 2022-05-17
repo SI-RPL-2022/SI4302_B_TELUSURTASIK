@@ -31,6 +31,10 @@
     <input type="text" class="form-control" id="location" name="location" aria-describedby="" value="{{$data->location}}" placeholder="" required>
   </div>
   <div class="form-group">
+    <label for="maps">Maps</label>
+    <input type="text" class="form-control" id="maps" name="maps" aria-describedby="" value="{{$data->maps}}" placeholder="" required>
+  </div>
+  <div class="form-group">
     <label for="deskripsi">Deskripsi</label>
     <textarea class="form-control" id="deskripsi" name="desc" rows="15" value="" placeholder="" required>{{$data->desc}}</textarea>
   </div>

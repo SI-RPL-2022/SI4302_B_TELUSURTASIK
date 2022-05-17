@@ -26,4 +26,20 @@ class MainController extends Controller
             ->get();
         return view('customer.home.index', compact('wisata', 'review'));
     }
+
+    public function showBantuanUser(){
+        $help = DB::table('helps')
+            ->select('*')
+            ->where('categories', 'User')
+            ->get();
+        return view('customer.help.user', compact('help'));
+    }
+    public function showBantuanMitra(){
+        $help = DB::table('helps')
+            ->select('*')
+            ->where('categories', 'Mitra')
+            ->get();
+        return view('customer.help.mitra', compact('help'));
+    }
+
 }
