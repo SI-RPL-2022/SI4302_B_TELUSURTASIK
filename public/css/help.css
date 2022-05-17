@@ -114,6 +114,21 @@ display: none;
 .btn:active {
     background-color: #f09630;
 }
+
+.btn-outline-success {
+    border: 2px solid black;
+    border-color: #4CAF50;
+    color: #4CAF50;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .btn-outline-success:hover {
+    background-color: #4CAF50;
+    color: black;
+    border: 2px solid #4CAF50;
+  }
+
 .shadow-sm {
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
 }

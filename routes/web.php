@@ -64,8 +64,8 @@ Route::post('/SimpanBantuan', [HelpController::class, 'store'])->middleware('is_
 Route::get('/EditBantuan/{id}', [HelpController::class, 'edit'])->middleware('is_admin');
 Route::post('/UpdateBantuan/{id}', [HelpController::class, 'update'])->middleware('is_admin');
 Route::get('/DeleteBantuan/{id}', [HelpController::class, 'delete'])->middleware('is_admin');
-Route::get('/HelpUser', [MainController::class, 'showBantuanUser']);
-Route::get('/HelpMitra', [MainController::class, 'showBantuanMitra']);
+Route::get('/HelpUser', [MainController::class, 'showBantuanUser'])->name('help.user');
+Route::get('/HelpMitra', [MainController::class, 'showBantuanMitra'])->name('help.mitra');
 
 #cici landing page
 Auth::routes();
