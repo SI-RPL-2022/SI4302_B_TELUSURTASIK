@@ -37,9 +37,14 @@
                         @else
                             <li class="nav-item dropdown">
                                 @if(Auth::user()->is_admin==0)
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     {{ Auth::user()->name }}
                                 </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">My Profile</a>
+                                </div>
+                                   
+                                
                                 @elseif(Auth::user()->is_admin==1)
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('mitra.home') }}" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

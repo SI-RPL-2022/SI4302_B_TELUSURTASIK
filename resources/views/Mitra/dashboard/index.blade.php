@@ -33,7 +33,7 @@
         <a href="#" class="dropdown-item">My Profile</a>
         <form action="logout" method="post">
             @csrf
-            <button type="submit" class="nav-link px-3 border-0" style="background-color:#f7f7f7;color:#7AC678;">Opsi <span data-feather="log-out"></span></button>
+            <button type="submit" class="nav-link px-3 border-0" style="background-color:#f7f7f7;color:#7AC678;">Logout <span data-feather="log-out"></span></button>
 
         </form>
     </div>
