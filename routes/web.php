@@ -102,3 +102,5 @@ Route::resource('wisatas', DashboardPostsController::class)->middleware('is_mitr
 
 
 
+//sprint2
+Route::get('/MyProfileMitra', [WisataController::class, 'showWisataData'])->middleware('is_admin');
