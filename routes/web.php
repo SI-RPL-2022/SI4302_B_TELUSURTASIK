@@ -66,6 +66,11 @@ Route::post('/UpdateBantuan/{id}', [HelpController::class, 'update'])->middlewar
 Route::get('/DeleteBantuan/{id}', [HelpController::class, 'delete'])->middleware('is_admin');
 Route::get('/HelpUser', [MainController::class, 'showBantuanUser'])->name('help.user');
 Route::get('/HelpMitra', [MainController::class, 'showBantuanMitra'])->name('help.mitra');
+#yanharr sprint2
+Route::get('/showProfile/{id}',[UserController::class, 'showProfile']); #edit profile
+Route::put('/ProfileUserUpdate/{id}', [UserController::class, 'EditProfileUser']); #edit profile
+Route::get('/editPasswordUser',[UserController::class, 'showEditPasswordUser']);
+Route::put('/passwordsubmit', [UserController::class, 'EditPasswordUser']);
 
 #cici landing page
 Auth::routes();
@@ -102,5 +107,3 @@ Route::resource('wisatas', DashboardPostsController::class)->middleware('is_mitr
 
 
 
-//sprint2
-Route::get('/MyProfileMitra', [WisataController::class, 'showWisataData'])->middleware('is_admin');

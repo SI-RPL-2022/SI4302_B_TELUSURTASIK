@@ -114,7 +114,11 @@ class WisataController extends Controller
         return view('wisata.index')->with([
             'data' => $wisata
         ]);
-    
+            
     }
 
 }
+
+
+// select ('*')
+// where('id', Auth::user()->id )

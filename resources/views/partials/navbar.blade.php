@@ -41,7 +41,7 @@
                                     {{ Auth::user()->name }}
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">My Profile</a>
+                                    <a class="dropdown-item" href="{{url('/showProfile/'.Auth::user()->id)}}">My Profile</a>
                                 </div>
                                    
                                 
