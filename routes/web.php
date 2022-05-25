@@ -40,11 +40,12 @@ Route::get('/logout', function () {
 });
 // Route::get('/wisata', [WisataController::class, 'index']);
 Route::get('/wisata/{wisata}/show', [WisataController::class, 'UserLookDetailWisata'])->name('wisata.show');
+Route::post('/wisata/add_review', [WisataController::class, 'AddReviewWisata'])->name('wisata.add_review');
 Route::get('/wisata', [WisataController::class, 'UserLookWisata'])->name('wisata.index');
 // kategori
 Route::post('/kategoriWisata', [WisataController::class, 'showKategoriWisata']);
 
-
+// Route::get('/wisata/{wisata}/review', [WisataController::class, 'UserReview'])->name('wisata.review');
 
 #yanharr
 Route::get('/DataUser', [UserController::class, 'showUserData'])->name('admin.home')->middleware('is_admin');
