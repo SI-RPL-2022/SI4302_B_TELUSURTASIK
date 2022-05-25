@@ -5,31 +5,32 @@ active
 
 @section('content')
 <div class="container bootstrap snippets bootdey">
-    <h1 class="">Edit Profile</h1>
-      <hr>
+  <h1 class="">Edit Profile</h1>
+  <hr>
 	<div class="row">
       <!-- left column -->
-      
+      <form class="form-horizontal" role="form" method="post" action="/ProfileUserUpdate/{{$user->id}}" enctype="multipart/form-data">
+        @method('put')
+        @csrf
       <div class="col-md-3">
         <div class="text-center">
-          <img src="" width="200" height="200" class="img-circle img-thumbnail" alt="Photo Profile">
+          <img src="{{old('name', Auth::user()->photo_user)}}" width="200" height="200" class="img-circle img-thumbnail" alt="Photo Profile">
           <h6>Upload a different photo...</h6>
           
-          <input type="file" class="form-control">
+          <input type="file" name="gambar" class="form-control">
         </div>
       </div>
    
       <!-- edit form column -->
       <div class="col-md-9 personal-info">
-        @if(session()->has('message'))
-          <div class="alert alert-info alert-dismissable text-green-600 mb-4">{{ session()->get('message') }}</div>
+        @if(session('message'))
+          <div class="alert alert-info alert-dismissable text-green-600 mb-4">{{ session('message') }}</div>
         @endif
         <h3 class="text-center">My Profile</h3>
         
-        <form class="form-horizontal" role="form" method="post" action="/ProfileUserUpdate/{{$user->id}}">
-        <!-- {{ csrf_field() }}] -->
-        @method('put')
-        @csrf 
+        
+        
+         
           <div class="form-group">
             <label class="col-lg-3 control-label" for="email">Email</label>
             <div class="col-lg-8">

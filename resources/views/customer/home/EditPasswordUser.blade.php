@@ -5,8 +5,8 @@ active
 
 @section('content')
 <div class="container bootstrap snippets bootdey">
-    <h1 class="">Edit Profile</h1>
-      <hr>
+  <h1 class="">Edit Profile</h1>
+  <hr>
 	<div class="row">
       <!-- left column -->
       
@@ -29,7 +29,7 @@ active
         
         <h3 class="text-center">Edit Password</h3>
         
-        <form class="form-horizontal" role="form" method="post" action="/passwordsubmit">
+        <form class="form-horizontal" role="form" method="post" action="/passwordsubmit" enctype="multipart/form-data">
         @method('put')
         @csrf 
           <div class="form-group">

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\UserModel;
 use Illuminate\Support\Facades\DB;
 use Hash;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Str;
 
 
 class UserController extends Controller
@@ -73,84 +75,30 @@ class UserController extends Controller
 
         return redirect('DataMitra');
     }
-        // ini nampilin profile yang awal
-    // public function showProfile($id) {
 
-    //     $user = DB::table('users')
-    //         ->select('*')
-    //         ->where('id',$id )
-    //         ->get();
-    //     return view('customer.home.EditProfileUser')->with([
-    //         'data' => $user
-
-
-    //     ]);    
-
-        
-    // }
-    
-    // public function EditProfileUser(Request $request)
-    // {
-        
-    //     DB::table('users')->where('id',$request->id)->update([
-    //         'name' => $request->name,
-    //         'no_hp' => $request->no_hp
-          
-    //     ]);
-
-    //     return redirect('customer/home/EditProfileUser');  
-
-        
-
-
-        // $request->validate([
-        //     'name'=> ['required'],
-        //     'no_hp' => ['required']
-            
-        // ]);
-
-        // auth()->user()->update([
-        //     'name' => $request->name,
-        //     'no_hp' => $request->no_hp,
-
-        // ]);
-
-        // return back()->with('message','your profile has been updated');
-
-        
-        
-    // }
-
-
-    // public function EditProfileUser(Request $request, $id)
-    // {
-    //     $users = UserModel::find($id);
-    //     $users->name = $request->name;
-    //     $users->no_hp = $request->no_hp;
-        
-    //     $users->save();
-
-    //     return redirect('customer/home/index');
-    // }
-
-
+    //edit profile user//
     public function showProfile($id)
     {
         $user = UserModel::find($id);
         return view('customer.home.EditProfileUser', compact('user'));
     }
 
-    public function EditProfileUser(Request $request)
+    public function EditProfileUser(Request $request, $id)
     {
-        $request -> validate([
-            'name'=> ['required','unique:users,name'],
-            'no_hp'=> ['required'],
-        ]);
 
+        $request -> validate([
+            
+            'name'=> ['required'],
+            'no_hp'=> ['required'],
+                     
+        ]);
+        
         Auth()->user()->Update([
             'name' => $request->name,
             'no_hp' => $request->no_hp,
+            
         ]);
+
 
         return back()->with('message','Your profile has been updated');
     }
@@ -180,22 +128,41 @@ class UserController extends Controller
         $user->save();
         return back()->with('message','Pasword changed succesfully');
     }
+    
+    //edit profile mitra//
+    public function showProfileMitra($id)
+    {
+        $user = UserModel::find($id);
+        return view('Mitra.EditProfileMitra', compact('user'));
+    }
 
-    // backup2 controller edit password
-    // public function EditPasswordUser(Request $request)
-    // {
-    //     $request->validate([
-    //         'current_password' => ['required'],
-    //         'password' => ['required'],
-    //     ]);
+    public function EditProfileMitra(Request $request, $id)
+    {
 
-    //     if(Hash::check($request->current_password, Auth()->user()->password)) {
-    //         Auth()->user()->update(['password' => Hash::make($request->password)]);
-    //         return back()->with('message','your Password has been updated');
-    //     }
+        $request -> validate([
+            
+            'name'=> ['required'],
+            'no_hp'=> ['required'],
+            
+            
+        ]);
+        
+            
 
-    //     throw ValidationException::withMessages([
-    //     'current_password' => 'Your current password does not match with our record']);
-    // }
 
+        Auth()->user()->Update([
+            'name' => $request->name,
+            'no_hp' => $request->no_hp,
+            
+
+        ]);
+
+
+        return back()->with('message','Your profile has been updated');
+    }
+
+    public function showEditPasswordMitra()
+    {
+        return view('Mitra.EditPasswordMitra');
+    }
 }

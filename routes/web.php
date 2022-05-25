@@ -67,10 +67,15 @@ Route::get('/DeleteBantuan/{id}', [HelpController::class, 'delete'])->middleware
 Route::get('/HelpUser', [MainController::class, 'showBantuanUser'])->name('help.user');
 Route::get('/HelpMitra', [MainController::class, 'showBantuanMitra'])->name('help.mitra');
 #yanharr sprint2
+#user
 Route::get('/showProfile/{id}',[UserController::class, 'showProfile']); #edit profile
 Route::put('/ProfileUserUpdate/{id}', [UserController::class, 'EditProfileUser']); #edit profile
-Route::get('/editPasswordUser',[UserController::class, 'showEditPasswordUser']);
-Route::put('/passwordsubmit', [UserController::class, 'EditPasswordUser']);
+Route::get('/editPasswordUser',[UserController::class, 'showEditPasswordUser']);#show laman edit password
+Route::put('/passwordsubmit', [UserController::class, 'EditPasswordUser']); #execute edit password
+#mitra
+Route::get('/showProfileMitra/{id}',[UserController::class, 'showProfileMitra']); #edit profile User
+Route::put('/ProfileMitraUpdate/{id}', [UserController::class, 'EditProfileMitra']); #edit profile Mitra
+Route::get('/editPasswordMitra',[UserController::class, 'showEditPasswordMitra']);#show laman edit password
 
 #cici landing page
 Auth::routes();
