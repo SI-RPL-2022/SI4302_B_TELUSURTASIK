@@ -71,7 +71,7 @@ Route::get('/HelpMitra', [MainController::class, 'showBantuanMitra'])->name('hel
 Route::get('/showProfile/{id}',[UserController::class, 'showProfile']); #edit profile
 Route::put('/ProfileUserUpdate/{id}', [UserController::class, 'EditProfileUser']); #edit profile
 Route::get('/editPasswordUser',[UserController::class, 'showEditPasswordUser']);#show laman edit password
-Route::put('/passwordsubmit', [UserController::class, 'EditPasswordUser']); #execute edit password
+Route::put('/passwordsubmit', [UserController::class, 'EditPasswordUser']); #execute edit password user & Mitra
 #mitra
 Route::get('/showProfileMitra/{id}',[UserController::class, 'showProfileMitra']); #edit profile User
 Route::put('/ProfileMitraUpdate/{id}', [UserController::class, 'EditProfileMitra']); #edit profile Mitra

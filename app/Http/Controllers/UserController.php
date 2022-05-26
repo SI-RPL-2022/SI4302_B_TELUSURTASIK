@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Hash;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Str;
-
+use Illuminate\Support\Facades\File;
 
 class UserController extends Controller
 {
@@ -85,22 +85,29 @@ class UserController extends Controller
 
     public function EditProfileUser(Request $request, $id)
     {
-
-        $request -> validate([
-            
-            'name'=> ['required'],
-            'no_hp'=> ['required'],
-                     
-        ]);
         
-        Auth()->user()->Update([
-            'name' => $request->name,
-            'no_hp' => $request->no_hp,
-            
-        ]);
+        $user = UserModel::find($id);
+        $user->name = $request ->input('name');
+        $user->email = $request ->input('email');
+        $user->no_hp = $request ->input('no_hp');
+        if($request->hasfile('gambar'))
+        {
+            $destination = 'images/'.$user->photo_user;
+            if(File::exists($destination)) {
+                File::delete($destination);
+            }
+            $file = $request->file('gambar');
+            $extention = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extention;
+            $file->move('images/',$filename);
+            $user->photo_user = $filename;
+        }
+
+        $user->update();
 
 
-        return back()->with('message','Your profile has been updated');
+
+        return redirect()->back()->with('message','Your profile has been updated');
     }
 
     public function showEditPasswordUser()
@@ -139,30 +146,35 @@ class UserController extends Controller
     public function EditProfileMitra(Request $request, $id)
     {
 
-        $request -> validate([
-            
-            'name'=> ['required'],
-            'no_hp'=> ['required'],
-            
-            
-        ]);
+        $user = UserModel::find($id);
+        $user->name = $request ->input('name');
+        $user->email = $request ->input('email');
+        $user->no_hp = $request ->input('no_hp');
+        if($request->hasfile('gambar'))
+        {
+            $destination = 'images/'.$user->photo_user;
+            if(File::exists($destination)) {
+                File::delete($destination);
+            }
+            $file = $request->file('gambar');
+            $extention = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extention;
+            $file->move('images/',$filename);
+            $user->photo_user = $filename;
+        }
+
+        $user->update();
+
+
+
+        return redirect()->back()->with('message','Your profile has been updated');
         
-            
-
-
-        Auth()->user()->Update([
-            'name' => $request->name,
-            'no_hp' => $request->no_hp,
-            
-
-        ]);
-
-
-        return back()->with('message','Your profile has been updated');
     }
 
     public function showEditPasswordMitra()
     {
         return view('Mitra.EditPasswordMitra');
     }
+
+    # controller edit password mitra = edit password user
 }

@@ -85,7 +85,7 @@
                     @csrf    
                     <div class="col-md-3">
                         <div class="text-center">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="avatar img-circle img-thumbnail" alt="avatar">
+                            <img src="/images/{{$user->photo_user}}" class="avatar img-circle img-thumbnail" alt="{{$user->name}}">
                             <h6>Upload a different photo...</h6>
                 
                             <input type="file" name="gambar" class="form-control">
@@ -98,21 +98,21 @@
                     <div class="form-group">
                         <label class="col-lg-3 control-label" for="email">Email</label>
                         <div class="col-lg-8">
-                            <input class="form-control" id="email" type="text" name="email" value="{{old('name', Auth::user()->email)}}" readonly>
+                            <input class="form-control" id="email" type="text" name="email" value="{{$user->email}}" readonly>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="col-lg-3 control-label" for="name">Name</label>
                         <div class="col-lg-8">
-                            <input class="form-control" id="name" type="text" name="name" value="{{old('name', Auth::user()->name)}}" required>
+                            <input class="form-control" id="name" type="text" name="name" value="{{$user->name}}" required>
                         </div>
                     </div>  
                 
                     <div class="form-group">
                         <label class="col-lg-3 control-label" for="no HP">No HP</label>
                         <div class="col-lg-8">
-                            <input class="form-control" id="no HP" type="number" name="no_hp" value="{{old('no_hp', Auth::user()->no_hp)}}" required>
+                            <input class="form-control" id="no HP" type="number" name="no_hp" value="{{$user->no_hp}}" required>
                         </div>
                     </div>
                     <br>
