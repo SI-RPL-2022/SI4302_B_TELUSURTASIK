@@ -23,13 +23,18 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="navbar-nav">
-      <div class="nav-item text-nowrap">
-        <form action="logout" method="post">
-          @csrf
-          <button type="submit" class="nav-link px-3 border-0" style="background-color:#f7f7f7;color:#7AC678;">Logout <span data-feather="log-out"></span></button>
+    <div class="nav-item dropdown">
+      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+        <img class="rounded-circle me-lg-2" src="{{asset('img/user.jpg')}}" alt="" style="width: 40px; height: 40px;">
+        <span class="d-none d-lg-inline-flex">{{ Auth::user()->name }}</span>
+      </a>  
+      <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+          <a href="{{url('/showProfileMitra/'.Auth::user()->id)}}" class="dropdown-item">My Profile</a>
+          <form action="logout" method="post">
+              @csrf
+              <button type="submit" class="nav-link px-3 border-0" style="background-color:#f7f7f7;color:#7AC678;">Logout <span data-feather="log-out"></span></button>
 
-        </form>
+          </form>
       </div>
     </div>
   </header>
