@@ -20,16 +20,16 @@
     <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/help.css') }}">
     {{-- <link rel="stylesheet" href="css/style.css"> --}}
-    
+
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="{{ asset('css/templatemo-style.css') }}">
 
 </head>
     <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
         @include('partials.navbar')
-     
+
             @yield('content')
-    
+
         @include('partials.footer')
 
     <script src="js/script.js"></script>
