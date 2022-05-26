@@ -38,6 +38,7 @@ class DashboardPostsController extends Controller
       'title' => 'required',
       'categorie' => 'required',
       'location' => 'required',
+      'maps'=> 'required',
       'desc' => 'required',
       'picture' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
 
@@ -53,6 +54,7 @@ class DashboardPostsController extends Controller
       'title' => $request->title,
       'categorie' => $request->categorie,
       'location' => $request->location,
+      'maps'=> $request->maps,
       'desc' => $request->desc,
       'picture'     => $fileNameToStore
     ]);
@@ -87,6 +89,7 @@ class DashboardPostsController extends Controller
       'title' => 'required',
       'categorie' => 'required',
       'location' => 'required',
+      'maps'=> 'required',
       'desc' => 'required'
     ]);
 
@@ -100,6 +103,7 @@ class DashboardPostsController extends Controller
         'title' => $request->title,
         'categorie' => $request->categorie,
         'location' => $request->location,
+        'maps'=> $request->maps,
         'desc' => $request->desc
       ]);
 
@@ -115,6 +119,7 @@ class DashboardPostsController extends Controller
         'title' => $request->title,
         'categorie' => $request->categorie,
         'location' => $request->location,
+        'maps'=> $request->maps,
         'desc' => $request->desc,
         'picture'     => $fileNameToStore
       ]);

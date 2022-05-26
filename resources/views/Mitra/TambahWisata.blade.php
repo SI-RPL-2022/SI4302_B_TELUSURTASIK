@@ -111,6 +111,9 @@
                       <option value="Curug">Curug</option>
                       <option value="Pantai">Pantai</option>
                       <option value="Pemandangan">Pemandangan</option>
+                      <option value="Pemandangan">Sungai</option>
+                      <option value="Pemandangan">Kawah</option>
+                      <option value="Pemandangan">Cafe</option>
                     </select>
 
                     @error('categorie')
