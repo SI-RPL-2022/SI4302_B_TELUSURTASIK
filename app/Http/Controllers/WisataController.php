@@ -20,13 +20,15 @@ class WisataController extends Controller
         return view('wisata.detail', $data);
     }
 
-    public function UserLookWisata()
+    public function UserLookWisata(Request $request)
     {
+        $wisata = Wisata::where('status', 'Accepted')
+            ->when($request->has('searchWisata') && $request->searchWisata != null, function ($query) use ($request) {
+                $query->where('title', 'LIKE', '%' . $request->searchWisata . '%');
+            })->when($request->has('searchCategory') && $request->searchCategory != null, function ($query) use ($request) {
+                $query->where('categorie', $request->searchCategory);
+            })->paginate(3);
 
-        $wisata = DB::table('wisatas')
-            ->select('*')
-            ->where('status', '=', 'Accepted')
-            ->get();
         return view('wisata.index')->with([
             'title' => 'Data Wisata',
             'data' => $wisata
@@ -116,5 +118,7 @@ class WisataController extends Controller
         ]);
     
     }
-
+    
 }
+
+
