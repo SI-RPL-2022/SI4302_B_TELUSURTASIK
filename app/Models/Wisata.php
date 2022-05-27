@@ -9,7 +9,6 @@ class Wisata extends Model
 {
     protected $table = 'wisatas';
 
-    
     protected $primaryKey = 'id_wisata';
 
     protected $fillable = [
@@ -26,9 +25,7 @@ class Wisata extends Model
 
     // use HasFactory;
 
-    // protected $primaryKey = "id_wisata";
-
-    // public function reviews() {
-    //     return $this->hasMany(Review::class, 'id_wisata');
-    // }
+    public function reviews() {
+        return $this->hasMany(Review::class, 'id_wisata');
+    }
 }

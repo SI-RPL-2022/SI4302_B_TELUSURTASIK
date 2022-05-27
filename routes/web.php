@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardPostsController;
 use App\Http\Controllers\HelpController;
+use App\Http\Controllers\WishlistController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,6 +47,9 @@ Route::get('/wisata', [WisataController::class, 'UserLookWisata'])->name('wisata
 Route::post('/kategoriWisata', [WisataController::class, 'showKategoriWisata']);
 
 // Route::get('/wisata/{wisata}/review', [WisataController::class, 'UserReview'])->name('wisata.review');
+// WISH LIST
+Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
+Route::post('/wishlist', [WishlistController::class, 'store'])->name('wishlist.store');
 
 #yanharr
 Route::get('/DataUser', [UserController::class, 'showUserData'])->name('admin.home')->middleware('is_admin');

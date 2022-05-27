@@ -85,7 +85,7 @@
                     @csrf    
                     <div class="col-md-3">
                         <div class="text-center">
-                            <img src="/images/{{$user->photo_user}}" class="avatar img-circle img-thumbnail" alt="{{$user->name}}">
+                            <img src="/images/{{$user->photo_user}}" class="aavatar img-circle img-thumbnail" alt="{{$user->name}}">
                             <h6>Upload a different photo...</h6>
                 
                             <input type="file" name="gambar" class="form-control">
