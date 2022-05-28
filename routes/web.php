@@ -80,7 +80,7 @@ Route::put('/passwordsubmit', [UserController::class, 'EditPasswordUser']); #exe
 #mitra
 Route::get('/showProfileMitra/{id}',[UserController::class, 'showProfileMitra']); #edit profile User
 Route::put('/ProfileMitraUpdate/{id}', [UserController::class, 'EditProfileMitra']); #edit profile Mitra
-Route::get('/editPasswordMitra',[UserController::class, 'showEditPasswordMitra']);#show laman edit password
+Route::get('/editPasswordMitra/{id}',[UserController::class, 'showEditPasswordMitra']);#show laman edit password
 
 #cici landing page
 Auth::routes();

@@ -26,7 +26,7 @@
 
         <div class="nav-item dropdown">
         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-            <img class="rounded-circle me-lg-2" src="{{asset('img/user.jpg')}}" alt="" style="width: 40px; height: 40px;">
+            <img class="rounded-circle me-lg-2" src="/images/{{$user->photo_user}}" alt="" style="width: 40px; height: 40px;">
             <span class="d-none d-lg-inline-flex">{{ Auth::user()->name }}</span>
         </a>  
         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
@@ -117,7 +117,7 @@
                     </div>
                     <br>
                     <div class="col-md-12">
-                        <a href="/editPasswordMitra" class="btn btn-danger col-3 btn-sm">Edit Password</a>
+                        <a href="{{ ('/editPasswordMitra/'.$user->id) }}" class="btn btn-danger col-3 btn-sm">Edit Password</a>
                         <button type="submit" class="btn btn-warning col-5 btn-sm">Submit</button>  
                     </div> 
                 </div>

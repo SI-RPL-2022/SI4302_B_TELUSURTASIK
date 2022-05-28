@@ -171,9 +171,10 @@ class UserController extends Controller
         
     }
 
-    public function showEditPasswordMitra()
+    public function showEditPasswordMitra($id)
     {
-        return view('Mitra.EditPasswordMitra');
+        $user = UserModel::find($id);
+        return view('Mitra.EditPasswordMitra',compact('user'));
     }
 
     # controller edit password mitra = edit password user
