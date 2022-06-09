@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use App\Models\wisata;
+use App\Models\UserModel;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Str;
@@ -21,8 +22,9 @@ class DashboardPostsController extends Controller
     public function index()
     {
       $wisata = Wisata::latest()->get();
+      $user = UserModel::latest()->get();
 
-      return view('Mitra.dashboard.index', compact('wisata'));
+      return view('Mitra.dashboard.index', compact('wisata'), compact('user'));
     }
 
     public function create()

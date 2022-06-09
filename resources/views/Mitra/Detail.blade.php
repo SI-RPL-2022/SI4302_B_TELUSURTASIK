@@ -25,8 +25,8 @@
     
     <div class="nav-item dropdown">
     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-      <img class="rounded-circle me-lg-2" src="/images/{{$user->photo_user}}" alt="" style="width: 40px; height: 40px;">
-      <span class="d-none d-lg-inline-flex">Tulis Manual</span>
+      <img class="rounded-circle me-lg-2" src="" alt="" style="width: 40px; height: 40px;">
+      <span class="d-none d-lg-inline-flex">{{ Auth::user()->name }}</span>
     </a>  
     <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
         <a href="{{url('/showProfileMitra/'.Auth::user()->id)}}" class="dropdown-item">My Profile</a>
