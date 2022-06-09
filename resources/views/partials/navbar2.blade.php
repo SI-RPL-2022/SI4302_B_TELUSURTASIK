@@ -47,7 +47,7 @@
                 <!-- </a> -->
                 <div class="d-flex align-items-center ms-4 mb-4" style="margin-top:20px;">
                     <div class="position-relative">
-                        <img class="rounded-circle" src="{{asset('img/user.jpg')}}" alt="" style="width: 40px; height: 40px;">
+                        <img class="rounded-circle" src="Photo_user/{{ Auth::user()->photo_user }}" alt="" style="width: 40px; height: 40px;">
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
@@ -91,11 +91,11 @@
                     
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img class="rounded-circle me-lg-2" src="{{asset('img/user.jpg')}}" alt="" style="width: 40px; height: 40px;">
+                            <img class="rounded-circle me-lg-2" src="Photo_user/{{ Auth::user()->photo_user }}" alt="" style="width: 40px; height: 40px;">
                             <span class="d-none d-lg-inline-flex">Admin</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="{{url('/MyprofileMitra')}}" class="dropdown-item">My Profile</a>
+                            <a href="{{url('/showProfile/'.Auth::user()->id)}}" class="dropdown-item">My Profile</a>
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
