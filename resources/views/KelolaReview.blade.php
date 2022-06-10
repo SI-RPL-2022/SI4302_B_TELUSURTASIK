@@ -11,9 +11,12 @@
                 <table class="table text-start align-middle table-bordered table-hover mb-0">
                     <thead>
                         <tr class="text-dark">                        
-                            <th scope="col">Nama User</th>
+                            <th scope="col">Id Ulasan</th>
+                            <th scope="col">Nama Pengguna</th>
+                            <th scope="col">Nama Wisata</th>
                             <th scope="col">Ulasan</th>
                             <th scope="col">Timestamp</th>
+                            <th scope="col">Status</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -21,12 +24,32 @@
                         @foreach ($data as $row)
                         <tr>
 
-                            <td>{{$row->id_question}}</td>
+                            <td>{{$row->id}}</td>
+                            <td>{{$row->name}}</td>
                             <td>{{$row->title}}</td>
-                            <td>{{$row->categories}}</td>
-                            <td>{{$row->desc}}</td>
-                            
-                            <td><a class="btn btn-sm btn-warning" href="{{url('/EditBantuan/'.$row->id_question)}}">Update</a>   <a class="btn btn-sm btn-danger" href="{{url('/DeleteBantuan/'.$row->id_question)}}">Delete</a></td>
+                            <td width="400px">{{$row->desc}}</td>
+                            <td>{{$row->created_at}}</td>
+                            <td>{{$row->status}}</td>
+                            <td width="100px"> 
+                                <div class="mb-2">
+                                    @if ($row->status =="no")
+                                    <form action="{{ url('/KelolaReview/show/'.$row->id) }}" method="POST">
+                                        @csrf
+                                        <input name="status" type="text" value="yes" hidden>
+                                        <input name="id" type="text" value="{{$row->id}}" hidden>
+                                        <button type="submit" class="btn btn-sm btn-success" >Show</button>
+                                    </form>
+                                    @elseif ($row->status =="yes")
+                                    <form action="{{ url('/KelolaReview/hide/'.$row->id) }}" method="POST">
+                                        @csrf
+                                        <input name="status" type="text" value="no" hidden>
+                                        <input name="id" type="text" value="{{$row->id}}" hidden>
+                                        <button type="submit" class="btn btn-sm btn-warning" >Hide</button>
+                                    </form>
+                                    @endif
+                                </div>
+                                <a class="btn btn-sm btn-danger" href="{{url('/DeleteBantuan/'.$row->id)}}">Delete</a>
+                            </td>
                         </tr>
                         @endforeach
                        

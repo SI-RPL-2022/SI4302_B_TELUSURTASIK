@@ -71,7 +71,7 @@
                             <a href="{{url('/DataWisataPending')}}" class="dropdown-item">Data Wisata Pending</a>       
                         </div>
                     </div>
-                    <a href="" class="nav-item nav-link"><i class="bi bi-pencil-square me-2"></i>Kelola Ulasan</a>
+                    <a href="{{ url('/KelolaReview') }}" class="nav-item nav-link"><i class="bi bi-pencil-square me-2"></i>Kelola Ulasan</a>
                     <a href="" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Dashboard</a>
                     <a href="{{ url('/Help') }}" class="nav-item nav-link"><i class="bi bi-question-diamond-fill me-2"></i>Help</a>
                 </div>

@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardPostsController;
 use App\Http\Controllers\HelpController;
 use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\KelolaReviewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -86,6 +87,11 @@ Route::get('/editPasswordMitra/{id}',[UserController::class, 'showEditPasswordMi
 Auth::routes();
 Route::get('/', function () { return view('customer.home.index');});
 Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('landing.page');
+
+#cici kelola ulasan
+Route::get('/KelolaReview', [KelolaReviewController::class, 'showManageReviewData'])->middleware('is_admin');
+Route::post('/KelolaReview/show/{id}', [KelolaReviewController::class, 'testimoniShow']);
+Route::post('/KelolaReview/hide/{id}', [KelolaReviewController::class, 'testimoniHide']);
 
 //rahma
 Route::get('/Mitra', [DashboardPostsController::class, 'index'])->name('mitra.home')->middleware('is_mitra');

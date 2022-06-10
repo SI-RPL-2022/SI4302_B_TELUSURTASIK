@@ -16,29 +16,6 @@
             <div class="col-md-6">
                 <h4 class="font-weight-bold">{{ $wisata->title }}</h4>
                 <i class="fa fa-map-marker"><h5 class="font-weight-bold">{{ $wisata->location }}</h5></i>
-                <p class="py-3">
-                    <i class="fa fa-fw fa-star"></i>
-                    <i class="fa fa-fw fa-star"></i>
-                    <i class="fa fa-fw fa-star"></i>
-                    <i class="fa fa-fw fa-star"></i>
-                    <i class="fa fa-fw fa-star"></i>
-                </p>
-                <br>
-                <br>
-                <div class="rating-css" style="color: #ffe400;font-size: 15px;font-family: sans-serif;font-weight: 800;">
-                    <div class="star-icon">
-
-                        <label for="rating1" class="fa fa-star"></label>
-                        
-                        <label class="fa fa-star"></label>
-                        
-                        <label for="rating3" class="fa fa-star"></label>
-                        
-                        <label for="rating4" class="fa fa-star"></label>
-                        
-                        <label for="rating5" class="fa fa-star"></label>
-                    </div>
-                </div>
                 <div class="row">
 
                     <div class="col-md-4 mb-4">
