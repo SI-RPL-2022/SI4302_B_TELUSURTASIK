@@ -64,6 +64,8 @@ Route::post('/DataWisataUpdate', [WisataController::class, 'EditWisataData'])->m
 Route::get('/DeleteDataUser/{id}', [UserController::class, 'DeleteDataUser'])->middleware('is_admin');
 Route::get('/DeleteDataMitra/{id}', [UserController::class, 'DeleteDataMitra'])->middleware('is_admin');
 Route::get('/DeleteDataWisata/{id}', [WisataController::class, 'DeleteWisataData'])->middleware('is_admin');
+
+#cici Help
 Route::get('/Help', [HelpController::class, 'showHelpData'])->middleware('is_admin');
 Route::get('/TambahBantuan', [HelpController::class, 'create'])->middleware('is_admin');
 Route::post('/SimpanBantuan', [HelpController::class, 'store'])->middleware('is_admin');
@@ -72,6 +74,7 @@ Route::post('/UpdateBantuan/{id}', [HelpController::class, 'update'])->middlewar
 Route::get('/DeleteBantuan/{id}', [HelpController::class, 'delete'])->middleware('is_admin');
 Route::get('/HelpUser', [MainController::class, 'showBantuanUser'])->name('help.user');
 Route::get('/HelpMitra', [MainController::class, 'showBantuanMitra'])->name('help.mitra');
+
 #yanharr sprint2
 #user
 Route::get('/showProfile/{id}',[UserController::class, 'showProfile']); #edit profile
