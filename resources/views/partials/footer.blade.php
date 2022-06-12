@@ -11,9 +11,9 @@
 						</div>
               				<!-- Footer Social Area-->
               				<ul class="social">
-								<li class="list-inline-item"><a href="www.facebook.com"><i class="fa fa-facebook"></i></a></li>
-								<li class="list-inline-item"><a href="www.twitter.com"><i class="fa fa-twitter"></i></a></li>
-								<li class="list-inline-item"><a href="www.instagram.com"><i class="fa fa-instagram"></i></a></li>             
+								<li class="list-inline-item"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>             
 						  	</ul>
 					</div>
 				</div>
@@ -27,8 +27,8 @@
 						<ul>
 						<li><a href="/about">About Us</a></li>
 						<li><a href="/about">Our Team</a></li>
-						<li><a href="/help">Any Question</a></li>
-						<li><a href="/help">Contact Us</a></li>
+						<li><a href="/HelpUser">Any Question</a></li>
+						<li><a href="/HelpUser">Contact Us</a></li>
 						</ul>
 					</div>
 					</div>
