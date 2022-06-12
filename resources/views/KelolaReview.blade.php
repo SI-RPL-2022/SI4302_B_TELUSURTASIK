@@ -1,7 +1,7 @@
 @extends('partials.Navbar2')
 
 @section('content')
-<h2 style="Margin-top:10px;">{{ $title }}</h2>
+<h2 style="Margin-top:10px; margin-left: 20px;">{{ $title }}</h2>
     <div class="container-fluid pt-4 px-4">
         <div class="bg-light text-center rounded p-4">
             <div class="d-flex align-items-center justify-content-between mb-4">
@@ -24,31 +24,31 @@
                         @foreach ($data as $row)
                         <tr>
 
-                            <td>{{$row->id}}</td>
-                            <td>{{$row->name}}</td>
-                            <td>{{$row->title}}</td>
-                            <td width="400px">{{$row->desc}}</td>
-                            <td>{{$row->created_at}}</td>
-                            <td>{{$row->status}}</td>
-                            <td width="100px"> 
+                            <td width="80px">{{$row->id}}</td>
+                            <td width="150px">{{$row->name}}</td>
+                            <td width="150px">{{$row->title}}</td>
+                            <td width="300px">{{$row->desc}}</td>
+                            <td width="100px">{{$row->created_at}}</td>
+                            <td width="60px">{{$row->status}}</td>
+                            <td width="80px"> 
                                 <div class="mb-2">
                                     @if ($row->status =="no")
                                     <form action="{{ url('/KelolaReview/show/'.$row->id) }}" method="POST">
                                         @csrf
                                         <input name="status" type="text" value="yes" hidden>
                                         <input name="id" type="text" value="{{$row->id}}" hidden>
-                                        <button type="submit" class="btn btn-sm btn-success" >Show</button>
+                                        <button type="submit" class="btn btn-sm btn-success" style="height: 30px;width: 60px;">Show</button>
                                     </form>
                                     @elseif ($row->status =="yes")
                                     <form action="{{ url('/KelolaReview/hide/'.$row->id) }}" method="POST">
                                         @csrf
                                         <input name="status" type="text" value="no" hidden>
                                         <input name="id" type="text" value="{{$row->id}}" hidden>
-                                        <button type="submit" class="btn btn-sm btn-warning" >Hide</button>
+                                        <button type="submit" class="btn btn-sm btn-warning" style="height: 30px;width: 60px;">Hide</button>
                                     </form>
                                     @endif
                                 </div>
-                                <a class="btn btn-sm btn-danger" href="{{url('/DeleteBantuan/'.$row->id)}}">Delete</a>
+                                <a class="btn btn-sm btn-danger" style="height: 30px;width: 60px; " href="{{url('/DeleteBantuan/'.$row->id)}}" >Delete</a>
                             </td>
                         </tr>
                         @endforeach

@@ -1,12 +1,12 @@
 @extends('partials.Navbar2')
 
 @section('content')
-<h2 style="Margin-top:10px;">{{ $title }}</h2>
+<h2 style="Margin-top:10px; margin-left: 20px;">{{ $title }}</h2>
 
 <div class="row">
   @foreach ($data as $row)
 	<div class="col-md-4 col-sm-12 mb-3">
-		<div class="card">
+		<div class="card" style="margin-left: 20px; margin-right: 20px;">
 			<img src="{{asset('images/'.$row->picture)}}" style="height:250px" class="card-img-top" alt="{{$row->title}}">
  
 			<div class="card-body" style="height:200px">
