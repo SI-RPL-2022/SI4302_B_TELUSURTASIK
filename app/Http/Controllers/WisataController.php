@@ -93,19 +93,22 @@ class WisataController extends Controller
         ]);
     }
 
-    public function showWisataData()
+    public function showWisataData(Request $request)
     {
+        $wisata = Wisata::where('status', 'Accepted')
+            ->when($request->has('searchWisata') && $request->searchWisata != null, function ($query) use ($request) {
+                $query->where('title', 'LIKE', '%' . $request->searchWisata . '%');
+            })->when($request->has('searchCategory') && $request->searchCategory != null, function ($query) use ($request) {
+                $query->where('categorie', $request->searchCategory);
+            })->paginate(3);
 
-        $wisata = DB::table('wisatas')
-            ->select('*')
-            ->where('status', '=', 'Accepted')
-            ->get();
-        return view('DataWisata')->with([
+        return view('wisata.index')->with([
             'title' => 'Data Wisata',
             'data' => $wisata
         ]);
     }
 
+    
     public function UpdateWisataData($id)
     {
 
@@ -154,6 +157,7 @@ class WisataController extends Controller
             'data' => $wisata
         ]);
     }
+    
 }
 
 
