@@ -10,19 +10,15 @@
                     <div class="mr-auto">
                         <form action="{{ route('wisata.index') }}" method="GET">
                             @csrf
-                            <div class="searchbox rounded" >
-                                <input type="text" name="searchWisata" style="margin-top: 20px" class="form-control rounded"
+                            <div class="searchbox rounded" style="margin-top: 10px">
+                                <input type="text" name="searchWisata" style="height=20px;" class="form-control rounded"
                                     placeholder="Cari Wisata Disini" aria-label="Search"
                                     value="{{request('search')}}" />
-                                    
+                                <button class="btn btn-outline-secondary" type="submit"><i
+                                        class="fa fa-search"></i></button>
                             </div>
-                            <div>
-                                <button class="btn btn-warning" type="submit" style="margin-top: 20px" >
-                                    <i class="fa fa-search"></i></button>
-                            </div>            
-                        </form>    
                     </div>
-                    
+                    </form>
                 </div>
                 
                 <div class="courses-price1" style="margin-top: 20px">
@@ -74,7 +70,6 @@
                 @endforeach
             </div>
         </div>
-            
         <!-- pagination -->
         <div class="pagination justify-content-center mt-5">
             {{ $data->links() }}
@@ -83,11 +78,3 @@
     </div>
 </section>
 @endsection
-
-<!-- use Illuminate\Support\Collectionlinks;
-pake itu kalo mau rapih pagination -->
-
-
-
-
-

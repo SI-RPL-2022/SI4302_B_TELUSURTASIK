@@ -34,7 +34,7 @@ class WisataController extends Controller
 
         return view('wisata.index')->with([
             'title' => 'Data Wisata',
-            'data' => $wisata
+            'data' => $wisata,
         ]);
     }
 

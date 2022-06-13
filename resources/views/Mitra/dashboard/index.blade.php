@@ -35,6 +35,12 @@
             @csrf
             <button type="submit" class="nav-link px-3 border-0" style="background-color:#f7f7f7;color:#7AC678;">Logout <span data-feather="log-out"></span></button>
 
+  <div class="navbar-nav">
+    <div class="nav-item text-nowrap">
+      <form action="logout" method="post">
+          @csrf
+          <button type="submit" class="nav-link px-3 border-0" style="background-color:#f7f7f7;color:#7AC678;">Logout <span data-feather="log-out"></span></button>
+
         </form>
     </div>
   </div>
@@ -99,11 +105,6 @@
       </div>
 
       @endforeach
-      
-      
-          
-      </div>
-
     </main>
   </div>
 </div>
