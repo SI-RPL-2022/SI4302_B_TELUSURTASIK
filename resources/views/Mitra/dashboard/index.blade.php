@@ -3,35 +3,43 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <title>DASHBOARD | Mitra</title>
-    
+
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 
-    
+
     <!-- Custom styles for this template -->
     <link href="/css/dashboard.css" rel="stylesheet">
   </head>
   <body>
-    
+
 <header class="navbar navbar-dark sticky-top flex-md-nowrap p-0 shadow" style="background-color:#f7f7f7;">
   <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="{{ route('landing.page') }}"><img class="logo" src="https://drive.google.com/uc?export=view&id=1zsX29peLxMzYsdWqq9zcYBtmUTwXIv8n" width="140"></a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   
-  <div class="navbar-nav">
-    <div class="nav-item text-nowrap">
-      <form action="logout" method="post">
-          @csrf
-          <button type="submit" class="nav-link px-3 border-0" style="background-color:#f7f7f7;color:#7AC678;">Logout <span data-feather="log-out"></span></button>
+  
+  <div class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+      <img class="rounded-circle me-lg-2" src="/images/{{ Auth::user()->photo_user }}" alt="" style="width: 40px; height: 40px;">
+      <span class="d-none d-lg-inline-flex">{{ Auth::user()->name }}</span>
+    </a>  
+    <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+        <a href="{{url('/showProfileMitra/'.Auth::user()->id)}}" class="dropdown-item">My Profile</a>
+        <form action="logout" method="post">
+            @csrf
+            <button type="submit" class="nav-link px-3 border-0" style="background-color:#f7f7f7;color:#7AC678;">Logout <span data-feather="log-out"></span></button>
 
-      </form>
+        </form>
     </div>
   </div>
+ 
+   
 </header>
 
 <div class="container-fluid">
@@ -70,19 +78,19 @@
             <button type="button" class="btn btn-sm btn-outline-secondary" style="background-color:#a1e49d;">
                 <a class="nav-link active" aria-current="page" href="/TambahWisata" >Tambah Wisata</a>
             </button>
-            
+
           </div>
         </div>
       </div>
 
       <div class="row my-2">
- 
+
       @foreach ($wisata as $item)
-      
+
       <div class="col-md-4 col-sm-12 mb-3">
           <div class="card" style="width: 18rem;">
             <img src="{{asset('images/'.$item->picture)}}" value="logo" class="card-img-top" alt="..." style="height:250px">
-            
+
             <div class="card-body" style="height:200px">
               <h5 class="card-title">{{ $item->title}}</h5>
               <p class="card-text">{{ $item->desc}}</p>
@@ -100,7 +108,7 @@
       
       
           
-        </div>
+      </div>
 
     </main>
   </div>

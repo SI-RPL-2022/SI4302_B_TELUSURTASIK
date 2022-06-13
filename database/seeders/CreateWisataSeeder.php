@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Wisata;
 use Illuminate\Database\Seeder;
 
-class Wisata extends Seeder
+class CreateWisataSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -23,6 +23,7 @@ class Wisata extends Seeder
                 'desc'=> 'Curug Deng-deng adalah ...',
                 'status'=>'Pending',
                 'picture' => 'wisata1.jpg',
+                'maps' => 'map'
             ],
             [
                 'id_wisata'=>'2',
@@ -32,6 +33,7 @@ class Wisata extends Seeder
                 'desc'=> 'Viewdeck galunggung adalah ...',
                 'status'=>'Accepted',
                 'picture' => 'wisata5.jpg',
+                'maps' => 'map'
             ],
             [
                 'id_wisata'=>'3',
@@ -41,6 +43,7 @@ class Wisata extends Seeder
                 'desc'=> 'Pantai Karangtawulan adalah ...',
                 'status'=>'Pending',
                 'picture' => 'wisata2.jpg',
+                'maps' => 'map'
             ],
             [
                 'id_wisata'=>'4',
@@ -50,6 +53,7 @@ class Wisata extends Seeder
                 'desc'=> 'Karaha Bodas adalah ...',
                 'status'=>'Pending',
                 'picture' => 'wisata6.jpg',
+                'maps' => 'map'
             ],
             [
                 'id_wisata'=>'5',
@@ -59,6 +63,7 @@ class Wisata extends Seeder
                 'desc'=> 'Tonjong Canyon adalah ...',
                 'status'=>'Accepted',
                 'picture' => 'wisata4.jpg',
+                'maps' => 'map'
             ],
             [
                 'id_wisata'=>'6',
@@ -68,9 +73,10 @@ class Wisata extends Seeder
                 'desc'=> 'Curug Panetean adalah ...',
                 'status'=>'Pending',
                 'picture' => 'curugpanetean.jpg',
+                'maps' => 'map'
             ],
         ];
-        // foreach ($wisata as $key => $value) {
-        //     Wisata::create($value);}
+        foreach ($wisata as $key => $value) {
+            Wisata::create($value);}
     }
 }
