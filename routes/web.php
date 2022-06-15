@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardPostsController;
 use App\Http\Controllers\HelpController;
 use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\KelolaReviewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -63,6 +64,8 @@ Route::post('/DataWisataUpdate', [WisataController::class, 'EditWisataData'])->m
 Route::get('/DeleteDataUser/{id}', [UserController::class, 'DeleteDataUser'])->middleware('is_admin');
 Route::get('/DeleteDataMitra/{id}', [UserController::class, 'DeleteDataMitra'])->middleware('is_admin');
 Route::get('/DeleteDataWisata/{id}', [WisataController::class, 'DeleteWisataData'])->middleware('is_admin');
+
+#cici help
 Route::get('/Help', [HelpController::class, 'showHelpData'])->middleware('is_admin');
 Route::get('/TambahBantuan', [HelpController::class, 'create'])->middleware('is_admin');
 Route::post('/SimpanBantuan', [HelpController::class, 'store'])->middleware('is_admin');
@@ -71,6 +74,7 @@ Route::post('/UpdateBantuan/{id}', [HelpController::class, 'update'])->middlewar
 Route::get('/DeleteBantuan/{id}', [HelpController::class, 'delete'])->middleware('is_admin');
 Route::get('/HelpUser', [MainController::class, 'showBantuanUser'])->name('help.user');
 Route::get('/HelpMitra', [MainController::class, 'showBantuanMitra'])->name('help.mitra');
+
 #yanharr sprint2
 #user
 Route::get('/showProfile/{id}',[UserController::class, 'showProfile']); #edit profile
@@ -87,6 +91,11 @@ Auth::routes();
 Route::get('/', function () { return view('customer.home.index');});
 Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('landing.page');
 
+#cici kelola ulasan
+Route::get('/KelolaReview', [KelolaReviewController::class, 'showManageReviewData'])->middleware('is_admin');
+Route::post('/KelolaReview/show/{id}', [KelolaReviewController::class, 'testimoniShow']);
+Route::post('/KelolaReview/hide/{id}', [KelolaReviewController::class, 'testimoniHide']);
+
 //rahma
 Route::get('/Mitra', [DashboardPostsController::class, 'index'])->name('mitra.home')->middleware('is_mitra');
 Route::get('/TambahWisata',[DashboardPostsController::class, 'create'])->middleware('is_mitra');
@@ -98,23 +107,6 @@ Route::patch('/EditWisata', [DashboardPostsController::class, 'update'])->middle
 Route::get('/Delete/{id}', [DashboardPostsController::class, 'delete'])->middleware('is_mitra');
 Route::resource('/dashboard', DashboardPostsController::class)->middleware('is_mitra');
 Route::resource('wisatas', DashboardPostsController::class)->middleware('is_mitra');
-
-//Help
-// Route::get('/help', [App\Http\Controllers\HelpController::class, 'index']);
-
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
-
-
-// Route::get('/review', [ReviewController::class, 'index']);
-// Route::get('/admin/wisata', [WisataController::class, 'wisataAdmin']);
-// Route::get('/admin/wisata/create', [WisataController::class, 'create']);
-// Route::post('/admin/wisata', [WisataController::class, 'store']);
-// Route::get('/admin/wisata/{wisata}/edit', [WisataController::class, 'edit']);
-// Route::post('/admin/wisata/{wisata}', [WisataController::class, 'update']);
-// Route::post('/admin/wisata/{wisata}/delete', [WisataController::class, 'destroy']);
-
 
 
 Route::get('/review', function () {

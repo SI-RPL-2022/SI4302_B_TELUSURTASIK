@@ -22,7 +22,8 @@ class MainController extends Controller
             ->join('wisatas', 'wisatas.id_wisata', '=', 'reviews.id_wisata')
             ->select('users.photo_user', 'users.name', 'reviews.desc', 'wisatas.title', 'reviews.id', 'reviews.id_wisata', 'reviews.id_user')
             ->orderBy('reviews.created_at', 'DESC')
-            ->limit(4)
+            ->where('reviews.status' , 'yes')
+            ->limit(6)
             ->get();
         return view('customer.home.index', compact('wisata', 'review'));
     }

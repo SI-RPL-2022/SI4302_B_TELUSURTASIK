@@ -38,7 +38,7 @@ active
                                         <div class="col-md-6 col-sm-12">
                                              <h1>Membutuhkan Bantuan?</h1>
                                              {{-- <h3>Nam eget sapien vel nibh euismod vulputate in vel nibh. Quisque eu ex eu urna venenatis sollicitudin ut at libero. Visit <a rel="nofollow" href="https://www.facebook.com/templatemo">templatemo</a> page.</h3> --}}
-                                             <a href="/help" class="section-btn btn btn-default smoothScroll">Let's chat us</a>
+                                             <a href="/HelpUser" class="section-btn btn btn-default smoothScroll">Let's chat us</a>
                                         </div>
                                    </div>
                               </div>

@@ -1,7 +1,7 @@
 @extends('partials.Navbar2')
 
 @section('content')
-<h2 style="Margin-top:10px;">{{ $title }}</h2>
+<h2 style="Margin-top:10px; margin-left: 20px;">{{ $title }}</h2>
 <div class="container-fluid pt-4 px-4">
                 <div class="bg-light text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
@@ -22,13 +22,14 @@
                             <tbody>
                                 @foreach ($data as $row)
                                 <tr>  
-                                    <td>{{$row->id}}</td>
-                                    <td>{{$row->name}}</td>
-                                    <td>{{$row->no_hp}}</td>
-                                    <td>{{$row->email}}</td>
-                                    
-                                    <td><a class="btn btn-sm btn-warning" href="{{url('/EditDataMitraUser/'.$row->id)}}">Update</a>
-                                        <a class="btn btn-sm btn-danger" href="{{url('/DeleteDataMitra/'.$row->id)}}">Delete</a></td>
+                                    <td width="30px">{{$row->id}}</td>
+                                    <td width="200px">{{$row->name}}</td>
+                                    <td width="120px">{{$row->no_hp}}</td>
+                                    <td width="110px">{{$row->email}}</td>
+                                    <td width="110px">
+                                        <a class="btn btn-sm btn-warning" href="{{url('/EditDataMitraUser/'.$row->id)}}">Update</a>
+                                        <a class="btn btn-sm btn-danger" href="{{url('/DeleteDataMitra/'.$row->id)}}">Delete</a>
+                                    </td>
                                 </tr>
                                 @endforeach
                                
