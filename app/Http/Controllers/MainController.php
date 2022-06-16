@@ -6,6 +6,7 @@ use App\Models\review;
 use App\Models\Wisata;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\AboutUs;
 
 class MainController extends Controller
 {
@@ -41,6 +42,13 @@ class MainController extends Controller
             ->where('categories', 'Mitra')
             ->get();
         return view('customer.help.mitra', compact('help'));
+    }
+
+    public function showAboutUs()
+    {
+        $data = AboutUs::first();
+
+        return view('customer.about.index', compact('data'));
     }
 
 }

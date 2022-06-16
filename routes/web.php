@@ -8,6 +8,7 @@ use App\Http\Controllers\DashboardPostsController;
 use App\Http\Controllers\HelpController;
 use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\KelolaReviewController;
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,9 +27,6 @@ use Illuminate\Support\Facades\Route;
 //     return view('customer.wisata.index');
 // });
 
-Route::get('/about', function () {
-    return view('customer.about.index');
-});
 
 Route::get('/help', function () {
     return view('customer.help.index');
@@ -85,6 +83,10 @@ Route::put('/passwordsubmit', [UserController::class, 'EditPasswordUser']); #exe
 Route::get('/showProfileMitra/{id}',[UserController::class, 'showProfileMitra']); #edit profile User
 Route::put('/ProfileMitraUpdate/{id}', [UserController::class, 'EditProfileMitra']); #edit profile Mitra
 Route::get('/editPasswordMitra/{id}',[UserController::class, 'showEditPasswordMitra']);#show laman edit password
+#yanharr sprint3
+Route::get('/about',[MainController::class, 'showAboutUs']);
+Route::get('/edit-about-us', [AboutController::class, 'customAboutUs'])->middleware('is_admin'); 
+Route::post('/edit-about-us/update/{id}', [AboutController::class, 'updateAboutUs'])->middleware('is_admin'); 
 
 #cici landing page
 Auth::routes();

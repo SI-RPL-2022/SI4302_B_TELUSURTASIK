@@ -72,6 +72,8 @@
                         </div>
                     </div>
                     <a href="{{ url('/KelolaReview') }}" class="nav-item nav-link"><i class="bi bi-pencil-square me-2"></i>Kelola Ulasan</a>
+                    <a href="{{ url('edit-about-us') }}" class="nav-item nav-link"><i class="bi bi-pie-chart me-2"></i>Edit About Us</a>
+                    
                     <a href="" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Dashboard</a>
                     <a href="{{ url('/Help') }}" class="nav-item nav-link"><i class="bi bi-question-diamond-fill me-2"></i>Help</a>
                 </div>
