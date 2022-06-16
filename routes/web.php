@@ -6,6 +6,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardPostsController;
 use App\Http\Controllers\HelpController;
+use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,9 +26,6 @@ use Illuminate\Support\Facades\Route;
 //     return view('customer.wisata.index');
 // });
 
-Route::get('/about', function () {
-    return view('customer.about.index');
-});
 
 Route::get('/help', function () {
     return view('customer.help.index');
@@ -40,11 +39,15 @@ Route::get('/logout', function () {
 });
 // Route::get('/wisata', [WisataController::class, 'index']);
 Route::get('/wisata/{wisata}/show', [WisataController::class, 'UserLookDetailWisata'])->name('wisata.show');
+Route::post('/wisata/add_review', [WisataController::class, 'AddReviewWisata'])->name('wisata.add_review');
 Route::get('/wisata', [WisataController::class, 'UserLookWisata'])->name('wisata.index');
 // kategori
 Route::post('/kategoriWisata', [WisataController::class, 'showKategoriWisata']);
 
-
+// Route::get('/wisata/{wisata}/review', [WisataController::class, 'UserReview'])->name('wisata.review');
+// WISH LIST
+Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
+Route::post('/wishlist', [WishlistController::class, 'store'])->name('wishlist.store');
 
 #yanharr
 Route::get('/DataUser', [UserController::class, 'showUserData'])->name('admin.home')->middleware('is_admin');
@@ -75,7 +78,11 @@ Route::put('/passwordsubmit', [UserController::class, 'EditPasswordUser']); #exe
 #mitra
 Route::get('/showProfileMitra/{id}',[UserController::class, 'showProfileMitra']); #edit profile User
 Route::put('/ProfileMitraUpdate/{id}', [UserController::class, 'EditProfileMitra']); #edit profile Mitra
-Route::get('/editPasswordMitra',[UserController::class, 'showEditPasswordMitra']);#show laman edit password
+Route::get('/editPasswordMitra/{id}',[UserController::class, 'showEditPasswordMitra']);#show laman edit password
+#yanharr sprint3
+Route::get('/about',[MainController::class, 'showAboutUs']);
+Route::get('/edit-about-us', [AboutController::class, 'customAboutUs'])->middleware('is_admin'); 
+Route::post('/edit-about-us/update/{id}', [AboutController::class, 'updateAboutUs'])->middleware('is_admin'); 
 
 #cici landing page
 Auth::routes();
@@ -112,3 +119,6 @@ Route::resource('wisatas', DashboardPostsController::class)->middleware('is_mitr
 
 
 
+Route::get('/review', function () {
+    return view('wisata.review');
+});
