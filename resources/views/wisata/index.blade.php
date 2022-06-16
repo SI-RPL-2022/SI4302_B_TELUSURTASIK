@@ -41,10 +41,12 @@
                             <option selected value="All">Choose Category...</option>
                             <option value="Curug">Curug</option>
                             <option value="Pantai">Pantai</option>
+                            <option value="Sungai">Sungai</option>
                             <option value="Danau">Danau</option>
                             <option value="Coffee">Caffee</option>
-                            <option value="Wisata Budaya">Wisata Budaya</option>
                             <option value="Taman">Taman</option>
+                            <option value="Kampung Wisata">Kampung Wisata</option>
+                            <option value="Cagar Budaya">Cagar Budaya</option>
                         </select>
                         <button class="button" type="submit" tyle="box-sizing: ">Lihat</button>
                     </div>

@@ -20,13 +20,6 @@
                         alt="tempat wisata" height="200" style="object-fit: cover">
                     <div class="card-body">
                         <h5 class="card-title text-center">{{ $wishlist->wisata->title }}</h5>
-                        <p class="text-center">
-                            <i class="fa fa-fw fa-star"></i>
-                            <i class="fa fa-fw fa-star"></i>
-                            <i class="fa fa-fw fa-star"></i>
-                            <i class="fa fa-fw fa-star"></i>
-                            <i class="fa fa-fw fa-star"></i>
-                        </p>
                     </div>
 
                     <div class="card-footer">

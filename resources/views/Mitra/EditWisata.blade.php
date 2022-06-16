@@ -51,13 +51,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="database"></span>
-                Data Ulasan
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="{{url('/HelpMitra')}}">
                 <span data-feather="help-circle"></span>
                 Customer Service
               </a>
@@ -117,7 +111,12 @@
                     <select id="kategori" name="categorie" class="form-control @error('categorie')is-invalid @enderror" >
                       <option value="Curug" {{ ($dt->categorie == 'Curug') ? 'selected' : '' }}>Curug</option>
                       <option value="Pantai" {{ ($dt->categorie == 'Pantai') ? 'selected' : '' }}>Pantai</option>
-                      <option value="Pemandangan" {{ ($dt->categorie == 'Pemandangan') ? 'selected' : '' }}>Pemandangan</option>
+                      <option value="Danau" {{ ($dt->categorie == 'Danau') ? 'selected' : '' }}>Danau</option>
+                      <option value="Sungai" {{ ($dt->categorie == 'Sungai') ? 'selected' : '' }}>Sungai</option>
+                      <option value="Caffe" {{ ($dt->categorie == 'Caffe') ? 'selected' : '' }}>Caffe</option>
+                      <option value="Taman" {{ ($dt->categorie == 'Taman') ? 'selected' : '' }}>Taman</option>
+                      <option value="Cagar Budaya" {{ ($dt->categorie == 'Cagar Budaya') ? 'selected' : '' }}>Cagar Budaya</option>
+                      <option value="Kampung Wisata" {{ ($dt->categorie == 'Kampung Wisata') ? 'selected' : '' }}>Kampung Wisata</option>
                     </select>
 
                     @error('categorie')

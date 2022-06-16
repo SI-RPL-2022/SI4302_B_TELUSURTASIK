@@ -21,6 +21,7 @@ return new class extends Migration
             $table->foreign('id_wisata')->references('id_wisata')->on('wisatas')->onUpdate('cascade')->onDelete('cascade');
             $table->string('desc');
             $table->string('show');
+            $table->string('status')->default('no');
             $table->timestamps();
         });
     }

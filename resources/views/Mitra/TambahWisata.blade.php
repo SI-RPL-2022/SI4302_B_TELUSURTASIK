@@ -51,13 +51,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="database"></span>
-                Data Ulasan
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="{{url('/HelpMitra')}}">
                 <span data-feather="help-circle"></span>
                 Customer Service
               </a>
@@ -71,12 +65,6 @@
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
           <h1 class="h2">Mitra Partner</h1>
           <div class="btn-toolbar mb-2 mb-md-0">
-            {{-- <div class="btn-group me-2">
-              <button type="button" class="btn btn-sm btn-outline-secondary">
-                <a class="nav-link active" aria-current="page" href="/TambahWisata" style="color:#7AC678;">Tambah Wisata</a>
-              </button>
-
-            </div> --}}
           </div>
 
         </div>
@@ -114,11 +102,13 @@
                     <select class="form-control @error('categorie')is-invalid @enderror" id="categorie" name="categorie" placeholder="pilih kategori">
                       <option value="">Pilih Kategori</option>
                       <option value="Curug">Curug</option>
-                      <option value="Pantai">Pantai</option>
-                      <option value="Pemandangan">Pemandangan</option>
-                      <option value="Pemandangan">Sungai</option>
-                      <option value="Pemandangan">Kawah</option>
-                      <option value="Pemandangan">Cafe</option>
+                        <option value="Pantai">Pantai</option>
+                        <option value="Sungai">Sungai</option>
+                        <option value="Danau">Danau</option>
+                        <option value="Coffee">Caffee</option>
+                        <option value="Taman">Taman</option>
+                        <option value="Kampung Wisata">Kampung Wisata</option>
+                        <option value="Cagar Budaya">Cagar Budaya</option>
                     </select>
 
                     @error('categorie')
