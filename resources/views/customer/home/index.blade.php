@@ -90,7 +90,7 @@ active
                </div>
           </div>
      </section>
-          
+
      <!-- arrival section -->
      <section class="arrival_section" id="arrival_section">
           <div class="container">
@@ -135,7 +135,7 @@ active
                          <div class="section-title">
                               <h2>Popular Destination <small>Choose place you want to go</small></h2>
                          </div>
-                         
+
                          <div class="owl-carousel owl-theme owl-courses">
                               @foreach ($wisata as $wisatas)
                               <div class="col-md-4 col-sm-4">
@@ -204,5 +204,5 @@ active
                </div>
        </div>
    </div>
-</section> 
+</section>
 @endsection

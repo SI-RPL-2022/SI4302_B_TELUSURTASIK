@@ -118,6 +118,9 @@
                       <option value="Curug" {{ ($dt->categorie == 'Curug') ? 'selected' : '' }}>Curug</option>
                       <option value="Pantai" {{ ($dt->categorie == 'Pantai') ? 'selected' : '' }}>Pantai</option>
                       <option value="Pemandangan" {{ ($dt->categorie == 'Pemandangan') ? 'selected' : '' }}>Pemandangan</option>
+                      <option value="Sungai" {{ ($dt->categorie == 'Sungai') ? 'selected' : '' }}>Sungai</option>
+                      <option value="Kawah" {{ ($dt->categorie == 'Kawah') ? 'selected' : '' }}>Kawah</option>
+                      <option value="Cafe" {{ ($dt->categorie == 'Cafe') ? 'selected' : '' }}>Cafe</option>
                     </select>
 
                     @error('categorie')

@@ -1,13 +1,14 @@
 <?php
 
-use App\Http\Controllers\WisataController;
-use App\Http\Controllers\MainController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\DashboardPostsController;
-use App\Http\Controllers\HelpController;
-use App\Http\Controllers\WishlistController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HelpController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\WisataController;
+use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\DashboardPostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -104,7 +105,7 @@ Route::resource('wisatas', DashboardPostsController::class)->middleware('is_mitr
 
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
 
 // Route::get('/review', [ReviewController::class, 'index']);
