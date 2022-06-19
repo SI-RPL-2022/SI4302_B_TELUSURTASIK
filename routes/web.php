@@ -97,6 +97,7 @@ Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('la
 Route::get('/KelolaReview', [KelolaReviewController::class, 'showManageReviewData'])->middleware('is_admin');
 Route::post('/KelolaReview/show/{id}', [KelolaReviewController::class, 'testimoniShow']);
 Route::post('/KelolaReview/hide/{id}', [KelolaReviewController::class, 'testimoniHide']);
+Route::get('/DeleteKelolaReview/{id}', [KelolaReviewController::class, 'delete'])->middleware('is_admin');
 
 //rahma
 Route::get('/Mitra', [DashboardPostsController::class, 'index'])->name('mitra.home')->middleware('is_mitra');

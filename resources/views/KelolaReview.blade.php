@@ -48,7 +48,7 @@
                                     </form>
                                     @endif
                                 </div>
-                                <a class="btn btn-sm btn-danger" style="height: 30px;width: 60px; " href="{{url('/DeleteBantuan/'.$row->id)}}" >Delete</a>
+                                <a class="btn btn-sm btn-danger" style="height: 30px;width: 60px; " href="{{url('/DeleteKelolaReview/'.$row->id)}}" >Delete</a>
                             </td>
                         </tr>
                         @endforeach
