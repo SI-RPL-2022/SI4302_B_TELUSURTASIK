@@ -4,12 +4,7 @@
 @section('content')
 <div class="container">
     <div class="py-3 px-5">
-
-
-
-
-        <div class="row mb-5">
-            
+        <div class="row mb-5">            
             <div class="col-md-6" style="text-align: center">
                 <img src="{{ asset('images/'. $wisata->picture) }}" class="rounded img-fluid" alt="gambar wisata" width="500"/>
             </div>
@@ -95,6 +90,18 @@
                             @endif
 
                         </form>
+                    </div>
+                    <div class="col-md-4 mb-3" style="margin-top:12px;">                        
+                        <form action="{{ url('/wisata/recently-visit/add') }}" method="post">
+                            @csrf
+                            <input type="text" name="id_user" value="{{ Auth::user()->id }}" hidden>
+                            <input type="text" name="id_wisata" value="{{ $wisata->id_wisata }}" hidden>
+                            @if($recentlyVisitAdded)                    
+                            <button type="submit" class="btn btn-success rounded btn-block">Delete Recently</button>
+                            @else
+                            <button type="submit" class="btn btn-success rounded btn-block">Recently Visit</button>
+                            @endif                    
+                        </form>                            
                     </div>
                 </div>
             </div>

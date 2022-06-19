@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Wisata;
 use App\Models\WisataModel;
 use App\Models\Wishlist;
+use App\Models\RecentlyVisit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -49,6 +50,23 @@ class WisataController extends Controller
                 $isAlreadyWishlist = true;
             }
         }
+        
+        $recentlyVisit =  RecentlyVisit::where('id_user', Auth::user()->id)->get();
+        $recentlyVisitAdded = false;
+
+        foreach ($recentlyVisit as $recentlyVisits) {
+            if ($recentlyVisits->id_wisata == $wisata->id_wisata) {
+                $recentlyVisitAdded = true;
+            }
+        }
+
+        $wisata = Wisata::find($id);
+        $review = DB::table('reviews')
+        ->join('users', 'reviews.id_user', '=', 'users.id')
+        ->join('wisatas', 'reviews.id_wisata', '=', 'wisatas.id_wisata')
+                ->select('reviews.*', 'users.id', 'users.name', 'wisatas.id_wisata')
+        ->where('wisatas.id_wisata', $id)
+        ->get();        
 
         $wisata = Wisata::find($id);
         $review = DB::table('reviews')
@@ -63,6 +81,7 @@ class WisataController extends Controller
             'wisata' => $wisata,
             'isAlreadyWishlist' => $isAlreadyWishlist,
             'review' => $review,
+            'recentlyVisitAdded' => $recentlyVisitAdded,
         ]);
     }
 
@@ -153,6 +172,36 @@ class WisataController extends Controller
         return view('wisata.index')->with([
             'data' => $wisata
         ]);
+    }
+
+    public function addRecentlyVisit(Request $request)
+    {  
+        $checkRecentlyVisit = RecentlyVisit::where('id_user', $request->id_user)        
+                            ->where('id_wisata', $request->id_wisata)
+                            ->first();
+
+        if ($checkRecentlyVisit) {
+           $checkRecentlyVisit->delete();
+        } else {
+            RecentlyVisit::create([
+                'id_user' => $request->id_user,
+                'id_wisata' => $request->id_wisata
+            ]);
+        }
+                    
+        return redirect()->back();
+    }
+
+    public function showRecentlyVisit()
+    {
+        $data = DB::table('wisatas')
+                ->select('wisatas.picture', 'wisatas.title', 'wisatas.desc', 'wisatas.id_wisata',
+                    'recently_visit.id_user')
+                ->join('recently_visit', 'wisatas.id_wisata', '=', 'recently_visit.id_wisata')                
+                ->where('recently_visit.id_user', Auth::user()->id)
+                ->paginate(3);        
+
+        return view('wisata.show_recentlyVisit', compact('data'));
     }
 }
 
