@@ -4,7 +4,7 @@
 
 <section id="forum">
 <div class="courses-container">
-	<h1>Halaman About</h1>
+	<h1>Halaman About Us</h1>
 	<div class="course">
 		{{-- <div class="course-info">
 			<h6>Chapter 4</h6>

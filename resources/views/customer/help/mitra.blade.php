@@ -1,13 +1,13 @@
 @extends('master')
 @section('content')
 
-<section id=faq>
+<section>
     <div class="container">
         <h2>Frequently Asked Questions</h2>
         <main>
           <div class="register-switch"  style="text-align: center">
-            <a class="btn btn-success" href="{{ url('/HelpUser') }}">User</a>
-            <a class="btn btn-success" href="{{ url('/HelpMitra') }}">Mitra</a>
+            <a class="btn {{ request()->route()->getName() === 'help.user' ? 'btn-success' : 'btn-outline-success' }}" href="{{ url('/HelpUser') }}">User</a>
+            <a class="btn {{ request()->route()->getName() === 'help.mitra' ? 'btn-success' : 'btn-outline-success' }}" href="{{ url('/HelpMitra') }}">Mitra</a>
           </div>
           <br>
           @foreach ($help as $item)

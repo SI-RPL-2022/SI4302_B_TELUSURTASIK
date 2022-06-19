@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use App\Models\wisata;
+use App\Models\UserModel;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Str;
@@ -21,8 +22,9 @@ class DashboardPostsController extends Controller
     public function index()
     {
       $wisata = Wisata::latest()->get();
+      $user = UserModel::latest()->get();
 
-      return view('Mitra.dashboard.index', compact('wisata'));
+      return view('Mitra.dashboard.index', compact('wisata'), compact('user'));
     }
 
     public function create()
@@ -38,6 +40,7 @@ class DashboardPostsController extends Controller
       'title' => 'required',
       'categorie' => 'required',
       'location' => 'required',
+      'maps'=> 'required',
       'desc' => 'required',
       'picture' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
 
@@ -53,6 +56,7 @@ class DashboardPostsController extends Controller
       'title' => $request->title,
       'categorie' => $request->categorie,
       'location' => $request->location,
+      'maps'=> $request->maps,
       'desc' => $request->desc,
       'picture'     => $fileNameToStore
     ]);
@@ -87,6 +91,7 @@ class DashboardPostsController extends Controller
       'title' => 'required',
       'categorie' => 'required',
       'location' => 'required',
+      'maps'=> 'required',
       'desc' => 'required'
     ]);
 
@@ -100,6 +105,7 @@ class DashboardPostsController extends Controller
         'title' => $request->title,
         'categorie' => $request->categorie,
         'location' => $request->location,
+        'maps'=> $request->maps,
         'desc' => $request->desc
       ]);
 
@@ -115,6 +121,7 @@ class DashboardPostsController extends Controller
         'title' => $request->title,
         'categorie' => $request->categorie,
         'location' => $request->location,
+        'maps'=> $request->maps,
         'desc' => $request->desc,
         'picture'     => $fileNameToStore
       ]);

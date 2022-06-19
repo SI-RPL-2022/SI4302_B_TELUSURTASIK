@@ -1370,14 +1370,15 @@ https://templatemo.com/tm-516-known
   float: left;  
   }  
   input[type=text] {  
-  padding: 6px;  
+  padding: 4px;  
   margin-top: 8px;  
-  font-size: 17px;  
+  font-size: 15px;  
   border: none;  
+  height:42px;
   }  
   .searchbox button {  
     
-  padding: 8px;  
+  padding: 4px;  
   margin-top: 10px;  
   margin-left: 10px;  
   background: #FBB667;  
