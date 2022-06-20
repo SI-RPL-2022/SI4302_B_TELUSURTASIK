@@ -9,7 +9,9 @@ use App\Http\Controllers\HelpController;
 use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\KelolaReviewController;
 use App\Http\Controllers\AboutController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -112,6 +114,8 @@ Route::patch('/EditWisata', [DashboardPostsController::class, 'update'])->middle
 Route::get('/Delete/{id}', [DashboardPostsController::class, 'delete'])->middleware('is_mitra');
 Route::resource('/dashboard', DashboardPostsController::class)->middleware('is_mitra');
 Route::resource('wisatas', DashboardPostsController::class)->middleware('is_mitra');
+
+Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
 
 Route::get('/review', function () {

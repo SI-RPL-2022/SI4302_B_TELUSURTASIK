@@ -47,11 +47,7 @@
                 <!-- </a> -->
                 <div class="d-flex align-items-center ms-4 mb-4" style="margin-top:20px;">
                     <div class="position-relative">
-<<<<<<< HEAD
                         <img class="rounded-circle" src="/images/{{ Auth::user()->photo_user }}" alt="" style="width: 40px; height: 40px;">
-=======
-                        <img class="rounded-circle" src="Photo_user/{{ Auth::user()->photo_user }}" alt="" style="width: 40px; height: 40px;">
->>>>>>> origin/Denayu
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
@@ -78,7 +74,8 @@
                     <a href="{{ url('/KelolaReview') }}" class="nav-item nav-link"><i class="bi bi-pencil-square me-2"></i>Kelola Ulasan</a>
                     <a href="{{ url('edit-about-us') }}" class="nav-item nav-link"><i class="bi bi-pie-chart me-2"></i>Edit About Us</a>
                     
-                    <a href="" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Dashboard</a>
+                    
+                    <a href="{{ url('/admin/home')}}" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Dashboard</a>
                     <a href="{{ url('/Help') }}" class="nav-item nav-link"><i class="bi bi-question-diamond-fill me-2"></i>Help</a>
                 </div>
             </nav>
