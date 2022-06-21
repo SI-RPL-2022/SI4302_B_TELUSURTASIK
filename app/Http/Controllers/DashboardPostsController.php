@@ -8,6 +8,7 @@ use App\Models\wisata;
 use App\Models\UserModel;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 
@@ -143,6 +144,37 @@ class DashboardPostsController extends Controller
     return redirect('/dashboard');
   }
 
+  public function dashboardMitra()
+    {
+      // $wisata = Wisata::where('id_user', Auth::user()->id)->get();
+      $wisata = DB::table("wisatas")
+                        ->select("categorie", DB::raw("count(*) as total"))
+                        ->where('id_user', Auth::user()->id)
+                        ->groupBy("categorie")
+                        ->get();
+      // $user = UserModel::latest()->get();
+      // $favorit = DB::table("wisatas")
+      //                   ->select("title", DB::raw("count(*) as total"))
+      //                   ->leftJoin('wishlists', 'wishlists.id_wisata', '=', 'wisatas.id_wisata')
+      //                   ->where('wisatas.id_user', Auth::user()->id)
+      //                   ->groupBy('title')
+      //                   ->get();
+      $favorit = DB::table("wisatas")
+                        ->select("title", DB::raw('count(*) as total'))
+                        ->rightJoin('wishlists', 'wishlists.id_wisata', '=', 'wisatas.id_wisata')
+                        ->where('wisatas.id_user', Auth::user()->id)
+                        ->groupBy('title')
+                        ->orderBy('total')
+                        ->get();
+      $rating = DB::table("wisatas")
+                        ->select("title", DB::raw('count(*) as total'))
+                        ->rightJoin('reviews', 'reviews.id_wisata', '=', 'wisatas.id_wisata')
+                        ->where('wisatas.id_user', Auth::user()->id)
+                        ->groupBy('title')
+                        ->orderBy('total')
+                        ->get();
+      return view('Mitra.dashboard.dashboard', compact('wisata', 'rating', 'favorit'));
+    }
 
 
 }

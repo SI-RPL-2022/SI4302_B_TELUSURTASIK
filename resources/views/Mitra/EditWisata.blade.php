@@ -41,31 +41,30 @@
 
   <div class="container-fluid">
     <div class="row">
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse" style="background-color:#f7f7f7;">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar" style="background-color:#f7f7f7;">
         <div class="position-sticky pt-3">
           <ul class="nav flex-column">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/dashboard">
                 <span data-feather="home"></span>
+                Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ route('mitra.home') }}">
+                <span data-feather="home"></span>
                 Data Wisata
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="database"></span>
-                Data Ulasan
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="{{url('/HelpMitra')}}">
                 <span data-feather="help-circle"></span>
                 Customer Service
               </a>
             </li>
           </ul>
-
         </div>
-      </nav>
+    </nav>
 
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -117,7 +116,12 @@
                     <select id="kategori" name="categorie" class="form-control @error('categorie')is-invalid @enderror" >
                       <option value="Curug" {{ ($dt->categorie == 'Curug') ? 'selected' : '' }}>Curug</option>
                       <option value="Pantai" {{ ($dt->categorie == 'Pantai') ? 'selected' : '' }}>Pantai</option>
-                      <option value="Pemandangan" {{ ($dt->categorie == 'Pemandangan') ? 'selected' : '' }}>Pemandangan</option>
+                      <option value="Danau" {{ ($dt->categorie == 'Danau') ? 'selected' : '' }}>Danau</option>
+                      <option value="Sungai" {{ ($dt->categorie == 'Sungai') ? 'selected' : '' }}>Sungai</option>
+                      <option value="Caffe" {{ ($dt->categorie == 'Caffe') ? 'selected' : '' }}>Caffe</option>
+                      <option value="Taman" {{ ($dt->categorie == 'Taman') ? 'selected' : '' }}>Taman</option>
+                      <option value="Cagar Budaya" {{ ($dt->categorie == 'Cagar Budaya') ? 'selected' : '' }}>Cagar Budaya</option>
+                      <option value="Kampung Wisata" {{ ($dt->categorie == 'Kampung Wisata') ? 'selected' : '' }}>Kampung Wisata</option>
                     </select>
 
                     @error('categorie')
