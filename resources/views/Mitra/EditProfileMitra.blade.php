@@ -42,30 +42,30 @@
 
     <div class="container-fluid">
         <div class="row">
-        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse" style="background-color:#f7f7f7;">
-            <div class="position-sticky pt-3">
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/dashboard">
-                    <span data-feather="home"></span>
-                    Data Wisata
-                </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{url('/HelpMitra')}}">
-                    <span data-feather="database"></span>
-                    Data Ulasan
-                </a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <span data-feather="help-circle"></span>
-                    Customer Service
-                </a>
-                </li>
-            </ul>
-            </div>
-        </nav>
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar" style="background-color:#f7f7f7;">
+                <div class="position-sticky pt-3">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="/dashboard">
+                        <span data-feather="home"></span>
+                        Dashboard
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="{{ route('mitra.home') }}">
+                        <span data-feather="home"></span>
+                        Data Wisata
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{url('/HelpMitra')}}">
+                        <span data-feather="help-circle"></span>
+                        Customer Service
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+            </nav>
 
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 

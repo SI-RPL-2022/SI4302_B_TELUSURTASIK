@@ -107,12 +107,11 @@ Route::get('/DeleteKelolaReview/{id}', [KelolaReviewController::class, 'delete']
 Route::get('/Mitra', [DashboardPostsController::class, 'index'])->name('mitra.home')->middleware('is_mitra');
 Route::get('/TambahWisata',[DashboardPostsController::class, 'create'])->middleware('is_mitra');
 Route::post('/TambahWisata',[DashboardPostsController::class, 'store'])->middleware('is_mitra');
-Route::get('/dashboard',[DashboardPostsController::class, 'index'])->middleware('is_mitra');
+Route::get('/dashboard',[DashboardPostsController::class, 'dashboardMitra'])->middleware('is_mitra');
 Route::get('/Detail/{id}',[DashboardPostsController::class, 'show'])->middleware('is_mitra');
 Route::get('/EditWisata/{id}', [DashboardPostsController::class, 'edit'])->middleware('is_mitra');
 Route::patch('/EditWisata', [DashboardPostsController::class, 'update'])->middleware('is_mitra');
 Route::get('/Delete/{id}', [DashboardPostsController::class, 'delete'])->middleware('is_mitra');
-Route::resource('/dashboard', DashboardPostsController::class)->middleware('is_mitra');
 Route::resource('wisatas', DashboardPostsController::class)->middleware('is_mitra');
 
 Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
