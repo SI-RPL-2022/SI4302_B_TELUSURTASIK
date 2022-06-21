@@ -191,7 +191,7 @@ active
                          <div class="col-md-4 col-sm-4">
                               <div class="item">
                                    <div class="tst-image">
-                                        <img src="{{ asset('images/'.$reviews->photo_user) }}" class="img-responsive" alt="">
+                                        <img src="/images/{{$reviews->photo_user }}" class="img-responsive" alt="">
                                    </div>
                                    <div class="tst-author">
                                         <h4>{{ $reviews->name }}</h4>

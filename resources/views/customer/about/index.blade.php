@@ -8,8 +8,8 @@
 <div class="text-left">
 	<div class="container-fluid">
 		<div class="col-md-12">
-			<h1 style="font-size:30px;">{{ $data->judul }}</h1>
-			<p align="justify">{{ $data->desc }}</p>
+			<h1 style="font-size:30px; margin-left:40px;">{{ $data->judul }}</h1>
+			<p align="justify" style="margin-left:40px; margin-right:40px">{{ $data->desc }}</p>
 			<div style="font-size:40px; text-align:center; margin-top:40px; margin-bottom:40px; text-underline-offset: 1rem;"><u style="text-decoration-color: #7AC678;">Our Team</u> </div>			
 		</div>		
 		<div class="container">
