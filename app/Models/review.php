@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Review extends Model
 {
     use HasFactory;
-    protected $with = ['wisata'];
 
     public function user()
     {
